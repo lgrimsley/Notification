@@ -1,0 +1,806 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"newp",
+				"newpwc"
+			],
+			[
+				"border-bottom",
+				"border-bottom-color"
+			],
+			[
+				"ser",
+				"services"
+			],
+			[
+				"prin",
+				"print_r"
+			],
+			[
+				"mysql_fetch_",
+				"mysql_fetch_row"
+			],
+			[
+				"mysql_fetch",
+				"mysql_fetch_assoc"
+			],
+			[
+				"mysql_fetch_a",
+				"mysql_fetch_assoc"
+			],
+			[
+				"mysql_re",
+				"mysql_real_escape_string"
+			],
+			[
+				"oat",
+				"oauth_token_secret"
+			],
+			[
+				"OAUTH",
+				"oauth_token"
+			],
+			[
+				"oauth",
+				"oauth_token_secret"
+			],
+			[
+				"col-md",
+				"col-md-offset-2"
+			],
+			[
+				"btn-",
+				"btn-default"
+			],
+			[
+				"sub",
+				"subject"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "style.css",
+			"settings":
+			{
+				"buffer_size": 2122,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "settings.php",
+			"settings":
+			{
+				"buffer_size": 4967,
+				"line_ending": "Windows",
+				"name": "<?php"
+			}
+		},
+		{
+			"file": "ajax/changepw.php",
+			"settings":
+			{
+				"buffer_size": 1776,
+				"line_ending": "Windows",
+				"name": "<?php"
+			}
+		},
+		{
+			"file": "a/index.php",
+			"settings":
+			{
+				"buffer_size": 5987,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "ajax/sendmail.php",
+			"settings":
+			{
+				"buffer_size": 5395,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "admin.php",
+			"settings":
+			{
+				"buffer_size": 10535,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "ajax/store_db.php",
+			"settings":
+			{
+				"buffer_size": 1240,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "functions.php",
+			"settings":
+			{
+				"buffer_size": 10878,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "ajax/store_var.php",
+			"settings":
+			{
+				"buffer_size": 3284,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "template/buildalertcontent.php",
+			"settings":
+			{
+				"buffer_size": 4546,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "template/emailform.php",
+			"settings":
+			{
+				"buffer_size": 3809,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/common.js",
+			"settings":
+			{
+				"buffer_size": 5822,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "ajax/auth.php",
+			"settings":
+			{
+				"buffer_size": 515,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"api",
+				"API-Completion-Package: Settings – User"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"reg",
+				"Set Syntax: Regular Expression"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Preferences: Browse Packages"
+			],
+			[
+				"<doc",
+				"Snippet: <?php foreach (…) … <?php endforeach ?>"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 182.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Logan/Documents/GitHub/Iglou/alert/index.php",
+		"/C/Users/Logan/Documents/GitHub/Iglou/alert/template/adminui.php",
+		"/C/Users/Logan/Documents/GitHub/Iglou/alert/style.css",
+		"/C/Users/Logan/Documents/GitHub/Iglou/alert/js/common.js",
+		"/C/Users/Logan/Documents/GitHub/Iglou/alert/template/buildalertcontent.php",
+		"/C/Users/Logan/Documents/GitHub/Iglou/alert/template/adminlogin.php",
+		"/C/Users/Logan/Documents/GitHub/Iglou/alert/template/emailform.php",
+		"/C/Users/Logan/Documents/GitHub/Iglou/alert/template/adminheader.php",
+		"/C/Users/Logan/Documents/GitHub/Iglou/alert/a/index.php",
+		"/C/Users/Logan/Documents/GitHub/Iglou/alert/template/services.php",
+		"/C/Users/Logan/Documents/GitHub/Iglou/alert/twitteroauth-master/connect.php",
+		"/C/Users/Logan/Documents/GitHub/Iglou/alert/ajax/store_var.php",
+		"/C/Users/Logan/Documents/GitHub/Iglou/alert/ajax/store_db.php",
+		"/C/Users/Logan/Documents/GitHub/Iglou/alert/twitteroauth-master/config.php",
+		"/C/Users/Logan/Documents/GitHub/Iglou/alert/codebird-php-develop/src/codebird.php",
+		"/C/Users/Logan/Documents/GitHub/Iglou/alert/twitteroauth-master/twitteroauth/twitteroauth.php",
+		"/C/Users/Logan/Documents/GitHub/Iglou/alert/twitteroauth-master/test.php",
+		"/C/Users/Logan/Documents/GitHub/Iglou/alert/twitteroauth-master/config-sample.php",
+		"/C/Users/Logan/Documents/GitHub/Iglou/alert/admin.php",
+		"/C/Users/Logan/Documents/GitHub/Iglou/alert/template/header.php",
+		"/C/Users/Logan/Documents/GitHub/Iglou/alert/functions.php",
+		"/C/Users/Logan/Desktop/silviomoreto-bootstrap-select-24e893a/test.html",
+		"/C/Users/Logan/Documents/GitHub/Iglou/alert/bootstrap/dist/css/bootstrap.min.css",
+		"/C/Users/Logan/Documents/GitHub/Iglou/alert/template/adminfooter.php",
+		"/C/Users/Logan/Documents/GitHub/Iglou/alert/template/footer.php",
+		"/C/Users/Logan/Documents/GitHub/Iglou/alert/alert.htm",
+		"/C/Users/Logan/Documents/GitHub/Iglou/alert/alertcontents.html",
+		"/C/Users/Logan/Documents/GitHub/Iglou/alert/alert.sublime-workspace",
+		"/C/Users/Logan/Documents/GitHub/Iglou/alert/bootstrap/getting-started.html",
+		"/C/Users/Logan/Documents/GitHub/Iglou/alert/bootstrap_old_/css/bootstrap-responsive.css",
+		"/C/Users/Logan/Documents/GitHub/Iglou/alert/bootstrap_old_/css/bootstrap-responsive.min.css",
+		"/C/Users/Logan/Documents/GitHub/Iglou/alert/bootstrap_old_/css/bootstrap.css",
+		"/C/Users/Logan/Documents/GitHub/Iglou/alert/bootstrap_old_/css/bootstrap.min.css",
+		"/C/Users/Logan/Documents/GitHub/Iglou/alert/ftpsync.settings",
+		"/C/Users/Logan/Documents/GitHub/Iglou/alert/save.php",
+		"/C/Users/Logan/AppData/Roaming/Sublime Text 2/Packages/User/sublime-API-Completions-Package.sublime-settings",
+		"/C/Users/Logan/AppData/Roaming/Sublime Text 2/Packages/Sublime-Better-Completion/sublime-API-Completions-Package.sublime-settings",
+		"/C/Users/Logan/Documents/GitHub/Iglou/alert/sftp-config.json",
+		"/C/Users/Logan/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Logan/Documents/GitHub/Iglou/template.html"
+	],
+	"find":
+	{
+		"height": 52.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"<open files>",
+			"C:\\Users\\Logan\\Documents\\GitHub\\Iglou\\alert",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"wrap",
+			"Settings",
+			"alerturl",
+			"affected",
+			"email",
+			"tweet",
+			"new",
+			"getConnectionWithAccessToken",
+			"twitphrase",
+			"post",
+			"$type",
+			"phone",
+			"subject",
+			"txtmsg",
+			"\"",
+			"select",
+			"selectpicker",
+			">\n",
+			"button",
+			"btn-large",
+			"col-md-9",
+			"btn-default",
+			"button",
+			"bootstrap.min.js",
+			"\"",
+			"add-on",
+			"input-prepend input-append",
+			"btn-large",
+			"btn",
+			"hero-unit",
+			"btn-navbar",
+			"nav-toggle",
+			"nav-collapse",
+			"offset*",
+			"<col-md-",
+			"span*",
+			"col-md*",
+			"span*",
+			"row-fluid",
+			"container-fluid",
+			".container-fluid",
+			"\"",
+			"include(\"functions.php\");",
+			"include(\"header.php\");",
+			"include(\"adminheader.php\");",
+			"invalid",
+			"console.log",
+			"$status",
+			"$hmtl",
+			"$html .=\""
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"'",
+			"btn-lg",
+			"col-md-12",
+			"'",
+			"input-group-addon",
+			"input-group",
+			"btn-lg",
+			"btn btn-default",
+			"jubotron",
+			"navbar-btn",
+			"navbar-toggle",
+			"col-md-offset",
+			"<span",
+			"col-md-",
+			"span",
+			"col-md*",
+			"row",
+			"container",
+			".container",
+			"'",
+			"include(\"template/adminheader.php\");",
+			"$_SESSION['status']",
+			"echo "
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 10,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "style.css",
+					"settings":
+					{
+						"buffer_size": 2122,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								298,
+								298
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "settings.php",
+					"settings":
+					{
+						"buffer_size": 4967,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3722,
+								3722
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<?php",
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1829.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "ajax/changepw.php",
+					"settings":
+					{
+						"buffer_size": 1776,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1694,
+								1694
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<?php",
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "a/index.php",
+					"settings":
+					{
+						"buffer_size": 5987,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1560,
+								1560
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 546.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "ajax/sendmail.php",
+					"settings":
+					{
+						"buffer_size": 5395,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5015,
+								5015
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1335.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "admin.php",
+					"settings":
+					{
+						"buffer_size": 10535,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7838,
+								7838
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4494.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "ajax/store_db.php",
+					"settings":
+					{
+						"buffer_size": 1240,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								953,
+								953
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "functions.php",
+					"settings":
+					{
+						"buffer_size": 10878,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10726,
+								10726
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 7767.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "ajax/store_var.php",
+					"settings":
+					{
+						"buffer_size": 3284,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2731,
+								2731
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 546.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "template/buildalertcontent.php",
+					"settings":
+					{
+						"buffer_size": 4546,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								4546
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4054.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "template/emailform.php",
+					"settings":
+					{
+						"buffer_size": 3809,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								858,
+								858
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 78.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "js/common.js",
+					"settings":
+					{
+						"buffer_size": 5822,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								231,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "ajax/auth.php",
+					"settings":
+					{
+						"buffer_size": 515,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								452,
+								452
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.sftp":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"template.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 193.0,
+	"status_bar_visible": true
+}

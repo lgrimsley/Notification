@@ -1,0 +1,260 @@
+html, html a {
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+
+    font-family: Century Gothic, sans-serif;
+}
+
+
+.tabpadding{
+
+	padding: 10px 1px !important;
+	text-align:center;
+
+
+}
+
+.settingspanel, a:hover{
+
+	color:white;
+	text-decoration: none !important;
+	font-weight: bold;
+
+
+}
+
+ .vmiddle {
+
+
+	display: inline-block !important;
+	vertical-align: middle !important;
+
+	}
+
+
+
+.btntxt {
+
+	font-size:85%;
+	font-weight: bold;
+	font-family: Century Gothic, sans-serif; 
+	white-space: none;
+	vertical-align:middle;
+
+	
+	}
+
+
+
+.maincontent{
+
+	height:400px;
+
+	width:600px;
+
+	border:3px solid orange;
+
+	vertical-align:middle;
+
+	text-align:center;
+
+	display:table-cell;
+
+}
+
+.bigbutton{
+
+width:150%;
+
+height:50px;
+
+padding:1%;
+
+margin:.3%;
+
+display:block;
+
+
+
+}
+
+
+
+.boxes {
+
+text-align:center;
+
+max-width:500px;
+min-width:320px;
+
+display:inline-block; 
+
+}
+
+.checkbox{
+
+display:none;
+
+}
+
+
+
+
+
+
+.allbox{
+
+font-weight:bold;
+
+cursor:pointer;
+
+height:18%;
+width:98.5%;
+
+cursor:hand;
+
+}
+
+.box{
+
+
+
+width:49%;
+
+height:15%;
+padding:0px !important; 
+padding-bottom:2% !important;
+
+margin:.3%;
+
+vertical-align:middle;
+
+}
+
+
+
+.maintable{
+
+width:100%;
+
+text-align:center;
+
+height:100%;
+
+}
+
+
+
+
+
+.button {
+min-width:83px !important;
+min-height:83px !important;
+padding: 10% 2% 2% 2% !important;
+}
+
+.buttonholder{
+
+	height:83px;
+
+
+}
+
+
+
+.error{
+
+font-weight:bold;
+
+
+
+
+
+}
+
+
+
+.hiddendiv{
+
+height:80%;
+
+width:100%;
+
+}
+
+.textarea{
+
+
+
+width:98%;
+
+height:120px;
+
+font-size:1.2em;
+
+}
+
+
+
+#calcformstyle{
+
+				
+
+				max-width:270px;
+				min-width:270px;
+				min-height: 400px;
+
+				padding: 5px 5px 5px;
+
+				margin: 0 auto 0px; 
+
+				padding-left:5px;
+
+				background-color: #fff;
+
+				border: 1px solid #e5e5e5;
+
+				-webkit-border-radius: 5px;
+
+				   -moz-border-radius: 5px;
+
+						border-radius: 5px;
+
+				-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+
+				   -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+
+						box-shadow: 0 1px 2px rgba(0,0,0,.05);
+
+}
+
+
+
+
+.bigtabmain{
+
+font-size:1.5em;
+
+width:100%;
+
+font-weight:bold;
+
+}
+
+.tabpic{
+
+padding:5px;
+
+size:5em;
+
+}
+
+.select{
+
+width:95%;
+
+height:15%;
+
+font-size:130%;
+
+}
