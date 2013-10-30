@@ -696,3 +696,204 @@
 [26-Oct-2013 14:11:21] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 332
 [26-Oct-2013 14:11:21] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 332
 [26-Oct-2013 14:11:21] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 332
+[28-Oct-2013 10:39:42] PHP Warning:  Invalid argument supplied for foreach() in /home/grimsley/public_html/alert/admin.php on line 141
+[28-Oct-2013 10:39:42] PHP Warning:  Invalid argument supplied for foreach() in /home/grimsley/public_html/alert/admin.php on line 203
+[28-Oct-2013 10:39:55] PHP Warning:  Invalid argument supplied for foreach() in /home/grimsley/public_html/alert/admin.php on line 141
+[28-Oct-2013 10:39:55] PHP Warning:  Invalid argument supplied for foreach() in /home/grimsley/public_html/alert/admin.php on line 203
+[28-Oct-2013 10:40:20] PHP Warning:  Invalid argument supplied for foreach() in /home/grimsley/public_html/alert/admin.php on line 203
+[28-Oct-2013 11:19:17] PHP Fatal error:  Can't use function return value in write context in /home/grimsley/public_html/alert/functions.php on line 601
+[28-Oct-2013 11:49:17] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/grimsley/public_html/alert/template/adminheader.php:14) in /home/grimsley/public_html/alert/admin.php on line 382
+[28-Oct-2013 11:49:17] PHP Warning:  Invalid argument supplied for foreach() in /home/grimsley/public_html/alert/admin.php on line 326
+[28-Oct-2013 11:49:17] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/grimsley/public_html/alert/template/adminheader.php:14) in /home/grimsley/public_html/alert/admin.php on line 382
+[28-Oct-2013 11:49:17] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 407
+[28-Oct-2013 11:49:19] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/grimsley/public_html/alert/template/adminheader.php:14) in /home/grimsley/public_html/alert/admin.php on line 284
+[28-Oct-2013 11:55:25] PHP Parse error:  syntax error, unexpected '{' in /home/grimsley/public_html/alert/admin.php on line 280
+[28-Oct-2013 11:55:41] PHP Parse error:  syntax error, unexpected T_ELSE in /home/grimsley/public_html/alert/admin.php on line 440
+[28-Oct-2013 11:55:57] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/grimsley/public_html/alert/template/adminheader.php:14) in /home/grimsley/public_html/alert/admin.php on line 373
+[28-Oct-2013 11:55:57] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 398
+[28-Oct-2013 12:02:34] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 430
+[28-Oct-2013 12:18:54] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 429
+[28-Oct-2013 12:20:34] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 429
+[28-Oct-2013 12:24:58] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 431
+[28-Oct-2013 12:25:44] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 431
+[28-Oct-2013 12:30:45] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 430
+[28-Oct-2013 12:31:10] PHP Parse error:  syntax error, unexpected ')' in /home/grimsley/public_html/alert/admin.php on line 428
+[28-Oct-2013 12:32:10] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 430
+[28-Oct-2013 13:06:10] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in /home/grimsley/public_html/alert/admin.php on line 325
+[28-Oct-2013 13:06:37] PHP Warning:  json_decode() expects parameter 1 to be string, object given in /home/grimsley/public_html/alert/admin.php on line 325
+[28-Oct-2013 13:09:27] PHP Fatal error:  Call to a member function buildOauth() on a non-object in /home/grimsley/public_html/alert/admin.php on line 324
+[28-Oct-2013 13:40:17] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/grimsley/public_html/alert/admin.php on line 315
+[28-Oct-2013 13:48:04] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/admin.php on line 317
+[28-Oct-2013 13:48:04] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/admin.php on line 317
+[28-Oct-2013 13:48:04] PHP Parse error:  syntax error, unexpected T_STRING in /home/grimsley/public_html/alert/admin.php on line 317
+[28-Oct-2013 13:49:12] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/admin.php on line 315
+[28-Oct-2013 13:49:12] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/admin.php on line 315
+[28-Oct-2013 13:49:12] PHP Parse error:  syntax error, unexpected T_STRING in /home/grimsley/public_html/alert/admin.php on line 315
+[28-Oct-2013 13:49:13] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/admin.php on line 315
+[28-Oct-2013 13:49:13] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/admin.php on line 315
+[28-Oct-2013 13:49:13] PHP Parse error:  syntax error, unexpected T_STRING in /home/grimsley/public_html/alert/admin.php on line 315
+[28-Oct-2013 13:49:21] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/admin.php on line 315
+[28-Oct-2013 13:49:21] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/admin.php on line 315
+[28-Oct-2013 13:49:21] PHP Parse error:  syntax error, unexpected T_STRING in /home/grimsley/public_html/alert/admin.php on line 315
+[28-Oct-2013 13:49:22] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/admin.php on line 315
+[28-Oct-2013 13:49:22] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/admin.php on line 315
+[28-Oct-2013 13:49:22] PHP Parse error:  syntax error, unexpected T_STRING in /home/grimsley/public_html/alert/admin.php on line 315
+[28-Oct-2013 13:49:24] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/admin.php on line 315
+[28-Oct-2013 13:49:24] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/admin.php on line 315
+[28-Oct-2013 13:49:24] PHP Parse error:  syntax error, unexpected T_STRING in /home/grimsley/public_html/alert/admin.php on line 315
+[28-Oct-2013 13:49:30] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/admin.php on line 315
+[28-Oct-2013 13:49:30] PHP Parse error:  syntax error, unexpected T_STRING in /home/grimsley/public_html/alert/admin.php on line 315
+[28-Oct-2013 13:52:13] PHP Warning:  require_once(codebird-php-develop/src/codebird.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/grimsley/public_html/alert/admin.php on line 313
+[28-Oct-2013 13:52:13] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'codebird-php-develop/src/codebird.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/grimsley/public_html/alert/admin.php on line 313
+[28-Oct-2013 13:52:33] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/admin.php on line 315
+[28-Oct-2013 13:52:33] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/admin.php on line 315
+[28-Oct-2013 13:52:33] PHP Parse error:  syntax error, unexpected T_STRING in /home/grimsley/public_html/alert/admin.php on line 315
+[28-Oct-2013 13:52:40] PHP Parse error:  syntax error, unexpected T_STRING in /home/grimsley/public_html/alert/codebird-php-develop/src/codebird.php on line 3
+[28-Oct-2013 13:53:01] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/codebird-php-develop/src/codebird.php on line 460
+[28-Oct-2013 13:53:01] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/codebird-php-develop/src/codebird.php on line 501
+[28-Oct-2013 13:53:01] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/codebird-php-develop/src/codebird.php on line 521
+[28-Oct-2013 13:53:01] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/codebird-php-develop/src/codebird.php on line 542
+[28-Oct-2013 13:53:01] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/codebird-php-develop/src/codebird.php on line 545
+[28-Oct-2013 13:53:01] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/codebird-php-develop/src/codebird.php on line 581
+[28-Oct-2013 13:53:01] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/codebird-php-develop/src/codebird.php on line 658
+[28-Oct-2013 13:53:01] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/codebird-php-develop/src/codebird.php on line 661
+[28-Oct-2013 13:53:01] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/codebird-php-develop/src/codebird.php on line 677
+[28-Oct-2013 13:53:01] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/codebird-php-develop/src/codebird.php on line 694
+[28-Oct-2013 13:53:01] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/codebird-php-develop/src/codebird.php on line 756
+[28-Oct-2013 13:53:01] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/codebird-php-develop/src/codebird.php on line 818
+[28-Oct-2013 13:53:01] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/codebird-php-develop/src/codebird.php on line 899
+[28-Oct-2013 13:53:01] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/codebird-php-develop/src/codebird.php on line 924
+[28-Oct-2013 13:53:01] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/codebird-php-develop/src/codebird.php on line 976
+[28-Oct-2013 13:53:01] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/codebird-php-develop/src/codebird.php on line 1038
+[28-Oct-2013 13:53:02] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error 77 while validating the Twitter API certificate.' in /home/grimsley/public_html/alert/codebird-php-develop/src/codebird.php:976
+Stack trace:
+#0 /home/grimsley/public_html/alert/codebird-php-develop/src/codebird.php(486): Codebird->_callApi('POST', 'statuses/update', 'statuses/update', Array, false, false)
+#1 /home/grimsley/public_html/alert/admin.php(322): Codebird->__call('statuses_update', Array)
+#2 /home/grimsley/public_html/alert/admin.php(322): Codebird->statuses_update(Array)
+#3 {main}
+  thrown in /home/grimsley/public_html/alert/codebird-php-develop/src/codebird.php on line 976
+[28-Oct-2013 13:53:38] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/admin.php on line 315
+[28-Oct-2013 13:53:38] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/admin.php on line 315
+[28-Oct-2013 13:53:38] PHP Parse error:  syntax error, unexpected T_STRING in /home/grimsley/public_html/alert/admin.php on line 315
+[28-Oct-2013 13:53:57] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/codebird-php-develop/src/codebird.php on line 460
+[28-Oct-2013 13:53:57] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/codebird-php-develop/src/codebird.php on line 501
+[28-Oct-2013 13:53:57] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/codebird-php-develop/src/codebird.php on line 521
+[28-Oct-2013 13:53:57] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/codebird-php-develop/src/codebird.php on line 542
+[28-Oct-2013 13:53:57] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/codebird-php-develop/src/codebird.php on line 545
+[28-Oct-2013 13:53:57] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/codebird-php-develop/src/codebird.php on line 581
+[28-Oct-2013 13:53:57] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/codebird-php-develop/src/codebird.php on line 658
+[28-Oct-2013 13:53:57] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/codebird-php-develop/src/codebird.php on line 661
+[28-Oct-2013 13:53:57] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/codebird-php-develop/src/codebird.php on line 677
+[28-Oct-2013 13:53:57] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/codebird-php-develop/src/codebird.php on line 694
+[28-Oct-2013 13:53:57] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/codebird-php-develop/src/codebird.php on line 756
+[28-Oct-2013 13:53:57] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/codebird-php-develop/src/codebird.php on line 818
+[28-Oct-2013 13:53:57] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/codebird-php-develop/src/codebird.php on line 899
+[28-Oct-2013 13:53:57] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/codebird-php-develop/src/codebird.php on line 924
+[28-Oct-2013 13:53:57] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/codebird-php-develop/src/codebird.php on line 976
+[28-Oct-2013 13:53:57] PHP Warning:  Unexpected character in input:  '\' (ASCII=92) state=1 in /home/grimsley/public_html/alert/codebird-php-develop/src/codebird.php on line 1038
+[28-Oct-2013 13:53:57] PHP Fatal error:  Uncaught exception 'Exception' with message 'Error 77 while validating the Twitter API certificate.' in /home/grimsley/public_html/alert/codebird-php-develop/src/codebird.php:976
+Stack trace:
+#0 /home/grimsley/public_html/alert/codebird-php-develop/src/codebird.php(486): Codebird->_callApi('POST', 'statuses/update', 'statuses/update', Array, false, false)
+#1 /home/grimsley/public_html/alert/admin.php(322): Codebird->__call('statuses_update', Array)
+#2 /home/grimsley/public_html/alert/admin.php(322): Codebird->statuses_update(Array)
+#3 {main}
+  thrown in /home/grimsley/public_html/alert/codebird-php-develop/src/codebird.php on line 976
+[28-Oct-2013 13:59:15] PHP Warning:  include(twitter/twitter.class.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/grimsley/public_html/alert/admin.php on line 312
+[28-Oct-2013 13:59:15] PHP Warning:  include(twitter/twitter.class.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/grimsley/public_html/alert/admin.php on line 312
+[28-Oct-2013 13:59:15] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening 'twitter/twitter.class.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/grimsley/public_html/alert/admin.php on line 312
+[28-Oct-2013 13:59:15] PHP Fatal error:  Class 'Twitter' not found in /home/grimsley/public_html/alert/admin.php on line 320
+[28-Oct-2013 14:15:47] PHP Parse error:  syntax error, unexpected '<' in /home/grimsley/public_html/alert/admin.php on line 246
+[28-Oct-2013 14:16:14] PHP Parse error:  syntax error, unexpected T_ELSEIF in /home/grimsley/public_html/alert/admin.php on line 308
+[28-Oct-2013 14:16:50] PHP Parse error:  syntax error, unexpected T_ELSEIF in /home/grimsley/public_html/alert/admin.php on line 308
+[28-Oct-2013 14:16:51] PHP Parse error:  syntax error, unexpected T_ELSEIF in /home/grimsley/public_html/alert/admin.php on line 308
+[28-Oct-2013 14:17:29] PHP Parse error:  syntax error, unexpected T_ELSEIF in /home/grimsley/public_html/alert/admin.php on line 309
+[28-Oct-2013 14:17:40] PHP Parse error:  syntax error, unexpected T_ELSEIF in /home/grimsley/public_html/alert/admin.php on line 309
+[28-Oct-2013 14:17:42] PHP Parse error:  syntax error, unexpected T_ELSEIF in /home/grimsley/public_html/alert/admin.php on line 309
+[28-Oct-2013 14:19:59] PHP Parse error:  syntax error, unexpected T_ELSEIF in /home/grimsley/public_html/alert/admin.php on line 309
+[28-Oct-2013 14:20:01] PHP Parse error:  syntax error, unexpected T_ELSEIF in /home/grimsley/public_html/alert/admin.php on line 309
+[28-Oct-2013 14:37:34] PHP Parse error:  syntax error, unexpected T_ELSEIF in /home/grimsley/public_html/alert/admin.php on line 309
+[28-Oct-2013 14:52:52] PHP Warning:  Wrong parameter count for substr() in /home/grimsley/public_html/alert/admin.php on line 132
+[28-Oct-2013 16:41:18] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:41:18] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:41:18] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:41:18] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:41:18] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:41:18] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:41:18] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:41:18] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:41:18] PHP Warning:  array_pop() [<a href='function.array-pop'>function.array-pop</a>]: The argument should be an array in /home/grimsley/public_html/alert/functions.php on line 593
+[28-Oct-2013 16:41:18] PHP Warning:  array_pop() [<a href='function.array-pop'>function.array-pop</a>]: The argument should be an array in /home/grimsley/public_html/alert/functions.php on line 594
+[28-Oct-2013 16:41:18] PHP Warning:  Invalid argument supplied for foreach() in /home/grimsley/public_html/alert/functions.php on line 607
+[28-Oct-2013 16:41:18] PHP Warning:  Invalid argument supplied for foreach() in /home/grimsley/public_html/alert/admin.php on line 131
+[28-Oct-2013 16:41:18] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 147
+[28-Oct-2013 16:41:18] PHP Warning:  Invalid argument supplied for foreach() in /home/grimsley/public_html/alert/template/buildalertcontent.php on line 339
+[28-Oct-2013 16:41:18] PHP Warning:  Invalid argument supplied for foreach() in /home/grimsley/public_html/alert/admin.php on line 192
+[28-Oct-2013 16:41:18] PHP Warning:  Invalid argument supplied for foreach() in /home/grimsley/public_html/alert/admin.php on line 253
+[28-Oct-2013 16:42:04] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:42:04] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:42:04] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:42:04] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:42:04] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:42:04] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:42:04] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:42:04] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:42:04] PHP Warning:  array_pop() [<a href='function.array-pop'>function.array-pop</a>]: The argument should be an array in /home/grimsley/public_html/alert/functions.php on line 593
+[28-Oct-2013 16:42:04] PHP Warning:  array_pop() [<a href='function.array-pop'>function.array-pop</a>]: The argument should be an array in /home/grimsley/public_html/alert/functions.php on line 594
+[28-Oct-2013 16:42:04] PHP Warning:  Invalid argument supplied for foreach() in /home/grimsley/public_html/alert/functions.php on line 607
+[28-Oct-2013 16:42:04] PHP Warning:  Invalid argument supplied for foreach() in /home/grimsley/public_html/alert/admin.php on line 131
+[28-Oct-2013 16:42:04] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 147
+[28-Oct-2013 16:42:04] PHP Warning:  Invalid argument supplied for foreach() in /home/grimsley/public_html/alert/template/buildalertcontent.php on line 339
+[28-Oct-2013 16:42:04] PHP Warning:  Invalid argument supplied for foreach() in /home/grimsley/public_html/alert/admin.php on line 192
+[28-Oct-2013 16:42:04] PHP Warning:  Invalid argument supplied for foreach() in /home/grimsley/public_html/alert/admin.php on line 253
+[28-Oct-2013 16:42:10] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:42:10] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:42:10] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:42:10] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:42:10] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:42:10] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:42:10] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:42:10] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:42:10] PHP Warning:  array_pop() [<a href='function.array-pop'>function.array-pop</a>]: The argument should be an array in /home/grimsley/public_html/alert/functions.php on line 593
+[28-Oct-2013 16:42:10] PHP Warning:  array_pop() [<a href='function.array-pop'>function.array-pop</a>]: The argument should be an array in /home/grimsley/public_html/alert/functions.php on line 594
+[28-Oct-2013 16:42:10] PHP Warning:  Invalid argument supplied for foreach() in /home/grimsley/public_html/alert/functions.php on line 607
+[28-Oct-2013 16:42:10] PHP Warning:  Invalid argument supplied for foreach() in /home/grimsley/public_html/alert/admin.php on line 131
+[28-Oct-2013 16:42:10] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 147
+[28-Oct-2013 16:42:10] PHP Warning:  Invalid argument supplied for foreach() in /home/grimsley/public_html/alert/template/buildalertcontent.php on line 339
+[28-Oct-2013 16:42:10] PHP Warning:  Invalid argument supplied for foreach() in /home/grimsley/public_html/alert/admin.php on line 192
+[28-Oct-2013 16:42:10] PHP Warning:  Invalid argument supplied for foreach() in /home/grimsley/public_html/alert/admin.php on line 253
+[28-Oct-2013 16:42:33] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:42:33] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:42:33] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:42:33] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:42:33] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:42:33] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:42:33] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:42:33] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:42:33] PHP Warning:  array_pop() [<a href='function.array-pop'>function.array-pop</a>]: The argument should be an array in /home/grimsley/public_html/alert/functions.php on line 593
+[28-Oct-2013 16:42:33] PHP Warning:  array_pop() [<a href='function.array-pop'>function.array-pop</a>]: The argument should be an array in /home/grimsley/public_html/alert/functions.php on line 594
+[28-Oct-2013 16:42:33] PHP Warning:  Invalid argument supplied for foreach() in /home/grimsley/public_html/alert/functions.php on line 607
+[28-Oct-2013 16:42:33] PHP Warning:  Invalid argument supplied for foreach() in /home/grimsley/public_html/alert/admin.php on line 131
+[28-Oct-2013 16:42:33] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 147
+[28-Oct-2013 16:42:33] PHP Warning:  Invalid argument supplied for foreach() in /home/grimsley/public_html/alert/template/buildalertcontent.php on line 339
+[28-Oct-2013 16:42:33] PHP Warning:  Invalid argument supplied for foreach() in /home/grimsley/public_html/alert/admin.php on line 192
+[28-Oct-2013 16:42:33] PHP Warning:  Invalid argument supplied for foreach() in /home/grimsley/public_html/alert/admin.php on line 253
+[28-Oct-2013 16:42:37] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:42:37] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:42:37] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:42:37] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:42:37] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:42:37] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:42:37] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:42:37] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 95
+[28-Oct-2013 16:42:37] PHP Warning:  array_pop() [<a href='function.array-pop'>function.array-pop</a>]: The argument should be an array in /home/grimsley/public_html/alert/functions.php on line 593
+[28-Oct-2013 16:42:37] PHP Warning:  array_pop() [<a href='function.array-pop'>function.array-pop</a>]: The argument should be an array in /home/grimsley/public_html/alert/functions.php on line 594
+[28-Oct-2013 16:42:37] PHP Warning:  Invalid argument supplied for foreach() in /home/grimsley/public_html/alert/functions.php on line 607
+[28-Oct-2013 16:42:37] PHP Warning:  Invalid argument supplied for foreach() in /home/grimsley/public_html/alert/admin.php on line 131
+[28-Oct-2013 16:42:37] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/admin.php on line 147
+[28-Oct-2013 16:42:37] PHP Warning:  Invalid argument supplied for foreach() in /home/grimsley/public_html/alert/template/buildalertcontent.php on line 339
+[28-Oct-2013 16:42:37] PHP Warning:  Invalid argument supplied for foreach() in /home/grimsley/public_html/alert/admin.php on line 192
+[28-Oct-2013 16:42:37] PHP Warning:  Invalid argument supplied for foreach() in /home/grimsley/public_html/alert/admin.php on line 253
+[29-Oct-2013 14:50:25] PHP Warning:  array_pop() [<a href='function.array-pop'>function.array-pop</a>]: The argument should be an array in /home/grimsley/public_html/alert/functions.php on line 615
+[29-Oct-2013 16:28:31] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/grimsley/public_html/alert/template/adminheader.php:14) in /home/grimsley/public_html/alert/settings.php on line 8
+[29-Oct-2013 16:42:09] PHP Fatal error:  Call to undefined function getDefaultMessages() in /home/grimsley/public_html/alert/settings.php on line 127
+[29-Oct-2013 16:42:17] PHP Fatal error:  Call to undefined function getDefaultMessages() in /home/grimsley/public_html/alert/settings.php on line 127

@@ -81,3 +81,96 @@
 [24-Oct-2013 16:42:43] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/grimsley/public_html/alert/ajax/store_var.php:45) in /home/grimsley/public_html/alert/ajax/store_var.php on line 46
 [24-Oct-2013 16:42:43] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/grimsley/public_html/alert/ajax/store_var.php:45) in /home/grimsley/public_html/alert/ajax/store_var.php on line 47
 [25-Oct-2013 10:08:58] PHP Fatal error:  Call to undefined function login() in /home/grimsley/public_html/alert/ajax/auth.php on line 2
+[28-Oct-2013 15:24:52] PHP Fatal error:  Call to undefined function dbconnect() in /home/grimsley/public_html/alert/ajax/store_var.php on line 64
+[28-Oct-2013 15:25:05] PHP Warning:  mysql_real_escape_string() [<a href='function.mysql-real-escape-string'>function.mysql-real-escape-string</a>]: Access denied for user 'grimsley'@'localhost' (using password: NO) in /home/grimsley/public_html/alert/ajax/store_var.php on line 64
+[28-Oct-2013 15:25:05] PHP Warning:  mysql_real_escape_string() [<a href='function.mysql-real-escape-string'>function.mysql-real-escape-string</a>]: A link to the server could not be established in /home/grimsley/public_html/alert/ajax/store_var.php on line 64
+[28-Oct-2013 15:25:05] PHP Warning:  mysql_real_escape_string() [<a href='function.mysql-real-escape-string'>function.mysql-real-escape-string</a>]: Access denied for user 'grimsley'@'localhost' (using password: NO) in /home/grimsley/public_html/alert/ajax/store_var.php on line 65
+[28-Oct-2013 15:25:05] PHP Warning:  mysql_real_escape_string() [<a href='function.mysql-real-escape-string'>function.mysql-real-escape-string</a>]: A link to the server could not be established in /home/grimsley/public_html/alert/ajax/store_var.php on line 65
+[28-Oct-2013 15:25:05] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user 'grimsley'@'localhost' (using password: NO) in /home/grimsley/public_html/alert/ajax/store_var.php on line 72
+[28-Oct-2013 15:25:05] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home/grimsley/public_html/alert/ajax/store_var.php on line 72
+[28-Oct-2013 15:38:10] PHP Warning:  implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed in /home/grimsley/public_html/alert/ajax/store_db.php on line 18
+[28-Oct-2013 15:38:10] PHP Warning:  implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed in /home/grimsley/public_html/alert/ajax/store_db.php on line 19
+[28-Oct-2013 15:38:16] PHP Warning:  implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed in /home/grimsley/public_html/alert/ajax/store_db.php on line 18
+[28-Oct-2013 15:38:16] PHP Warning:  implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed in /home/grimsley/public_html/alert/ajax/store_db.php on line 19
+[28-Oct-2013 15:38:16] PHP Warning:  implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed in /home/grimsley/public_html/alert/ajax/store_db.php on line 18
+[28-Oct-2013 15:38:16] PHP Warning:  implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed in /home/grimsley/public_html/alert/ajax/store_db.php on line 19
+[28-Oct-2013 15:38:24] PHP Warning:  implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed in /home/grimsley/public_html/alert/ajax/store_db.php on line 18
+[28-Oct-2013 15:38:24] PHP Warning:  implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed in /home/grimsley/public_html/alert/ajax/store_db.php on line 19
+[28-Oct-2013 15:38:41] PHP Warning:  implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed in /home/grimsley/public_html/alert/ajax/store_db.php on line 18
+[28-Oct-2013 15:38:41] PHP Warning:  implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed in /home/grimsley/public_html/alert/ajax/store_db.php on line 19
+[28-Oct-2013 15:38:42] PHP Warning:  implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed in /home/grimsley/public_html/alert/ajax/store_db.php on line 18
+[28-Oct-2013 15:38:42] PHP Warning:  implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed in /home/grimsley/public_html/alert/ajax/store_db.php on line 19
+[28-Oct-2013 15:38:43] PHP Warning:  implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed in /home/grimsley/public_html/alert/ajax/store_db.php on line 18
+[28-Oct-2013 15:38:43] PHP Warning:  implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed in /home/grimsley/public_html/alert/ajax/store_db.php on line 19
+[28-Oct-2013 15:38:45] PHP Warning:  implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed in /home/grimsley/public_html/alert/ajax/store_db.php on line 18
+[28-Oct-2013 15:38:45] PHP Warning:  implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed in /home/grimsley/public_html/alert/ajax/store_db.php on line 19
+[28-Oct-2013 15:38:45] PHP Warning:  implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed in /home/grimsley/public_html/alert/ajax/store_db.php on line 18
+[28-Oct-2013 15:38:45] PHP Warning:  implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed in /home/grimsley/public_html/alert/ajax/store_db.php on line 19
+[28-Oct-2013 15:38:46] PHP Warning:  implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed in /home/grimsley/public_html/alert/ajax/store_db.php on line 18
+[28-Oct-2013 15:38:46] PHP Warning:  implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed in /home/grimsley/public_html/alert/ajax/store_db.php on line 19
+[28-Oct-2013 15:39:21] PHP Warning:  implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed in /home/grimsley/public_html/alert/ajax/store_db.php on line 18
+[28-Oct-2013 15:39:21] PHP Warning:  implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed in /home/grimsley/public_html/alert/ajax/store_db.php on line 19
+[28-Oct-2013 15:54:13] PHP Parse error:  syntax error, unexpected T_IF in /home/grimsley/public_html/alert/ajax/store_db.php on line 26
+[28-Oct-2013 16:26:06] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/grimsley/public_html/alert/ajax/sendmail.php:2) in /home/grimsley/public_html/alert/ajax/sendmail.php on line 3
+[28-Oct-2013 16:27:51] PHP Warning:  implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed in /home/grimsley/public_html/alert/ajax/store_db.php on line 19
+[28-Oct-2013 16:27:51] PHP Warning:  implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed in /home/grimsley/public_html/alert/ajax/store_db.php on line 20
+[28-Oct-2013 16:27:58] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/grimsley/public_html/alert/ajax/sendmail.php on line 28
+[28-Oct-2013 16:27:58] PHP Warning:  Invalid argument supplied for foreach() in /home/grimsley/public_html/alert/ajax/sendmail.php on line 47
+[28-Oct-2013 16:43:36] PHP Warning:  include(twitter/twitter.class.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/grimsley/public_html/alert/ajax/sendmail.php on line 30
+[28-Oct-2013 16:43:36] PHP Warning:  include(twitter/twitter.class.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/grimsley/public_html/alert/ajax/sendmail.php on line 30
+[28-Oct-2013 16:43:36] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening 'twitter/twitter.class.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/grimsley/public_html/alert/ajax/sendmail.php on line 30
+[28-Oct-2013 16:43:36] PHP Fatal error:  Class 'Twitter' not found in /home/grimsley/public_html/alert/ajax/sendmail.php on line 37
+[28-Oct-2013 17:32:13] PHP Parse error:  syntax error, unexpected '.' in /home/grimsley/public_html/alert/ajax/sendmail.php on line 159
+[28-Oct-2013 17:34:38] PHP Parse error:  syntax error, unexpected '}' in /home/grimsley/public_html/alert/ajax/store_db.php on line 29
+[28-Oct-2013 17:41:01] PHP Fatal error:  Uncaught exception 'TwitterException' with message 'Status is over 140 characters.' in /home/grimsley/public_html/alert/twitter/twitter.class.php:247
+Stack trace:
+#0 /home/grimsley/public_html/alert/twitter/twitter.class.php(102): Twitter->request('statuses/update', 'POST', Array)
+#1 /home/grimsley/public_html/alert/ajax/sendmail.php(41): Twitter->send('IgLou Outage Af...')
+#2 {main}
+  thrown in /home/grimsley/public_html/alert/twitter/twitter.class.php on line 247
+[29-Oct-2013 11:48:41] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user 'grimsley'@'localhost' (using password: NO) in /home/grimsley/public_html/alert/ajax/store_var.php on line 56
+[29-Oct-2013 11:48:41] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home/grimsley/public_html/alert/ajax/store_var.php on line 56
+[29-Oct-2013 11:48:52] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user 'grimsley'@'localhost' (using password: NO) in /home/grimsley/public_html/alert/ajax/store_var.php on line 56
+[29-Oct-2013 11:48:52] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home/grimsley/public_html/alert/ajax/store_var.php on line 56
+[29-Oct-2013 11:48:54] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user 'grimsley'@'localhost' (using password: NO) in /home/grimsley/public_html/alert/ajax/store_var.php on line 56
+[29-Oct-2013 11:48:54] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home/grimsley/public_html/alert/ajax/store_var.php on line 56
+[29-Oct-2013 11:49:10] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user 'grimsley'@'localhost' (using password: NO) in /home/grimsley/public_html/alert/ajax/store_var.php on line 56
+[29-Oct-2013 11:49:10] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home/grimsley/public_html/alert/ajax/store_var.php on line 56
+[29-Oct-2013 11:49:36] PHP Warning:  mysql_fetch_field(): supplied argument is not a valid MySQL result resource in /home/grimsley/public_html/alert/ajax/store_var.php on line 73
+[29-Oct-2013 11:49:44] PHP Warning:  mysql_fetch_field(): supplied argument is not a valid MySQL result resource in /home/grimsley/public_html/alert/ajax/store_var.php on line 73
+[29-Oct-2013 11:50:10] PHP Warning:  mysql_fetch_row(): supplied argument is not a valid MySQL result resource in /home/grimsley/public_html/alert/ajax/store_var.php on line 73
+[29-Oct-2013 11:50:23] PHP Warning:  mysql_fetch_row(): supplied argument is not a valid MySQL result resource in /home/grimsley/public_html/alert/ajax/store_var.php on line 73
+[29-Oct-2013 11:50:49] PHP Warning:  mysql_fetch_row(): supplied argument is not a valid MySQL result resource in /home/grimsley/public_html/alert/ajax/store_var.php on line 73
+[29-Oct-2013 11:51:46] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/grimsley/public_html/alert/ajax/store_var.php on line 73
+[29-Oct-2013 11:52:39] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/grimsley/public_html/alert/ajax/store_var.php on line 73
+[29-Oct-2013 11:53:00] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/grimsley/public_html/alert/ajax/store_var.php on line 73
+[29-Oct-2013 11:53:03] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/grimsley/public_html/alert/ajax/store_var.php on line 73
+[29-Oct-2013 11:58:25] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in /home/grimsley/public_html/alert/ajax/store_var.php on line 75
+[29-Oct-2013 12:15:13] PHP Parse error:  syntax error, unexpected '}' in /home/grimsley/public_html/alert/ajax/sendmail.php on line 102
+[29-Oct-2013 12:18:09] PHP Fatal error:  Call to undefined function appendString() in /home/grimsley/public_html/alert/ajax/sendmail.php on line 104
+[29-Oct-2013 12:19:26] PHP Fatal error:  Uncaught exception 'TwitterException' with message 'Status is a duplicate.' in /home/grimsley/public_html/alert/twitter/twitter.class.php:247
+Stack trace:
+#0 /home/grimsley/public_html/alert/twitter/twitter.class.php(102): Twitter->request('statuses/update', 'POST', Array)
+#1 /home/grimsley/public_html/alert/ajax/sendmail.php(45): Twitter->send('Everything Up??...')
+#2 {main}
+  thrown in /home/grimsley/public_html/alert/twitter/twitter.class.php on line 247
+[29-Oct-2013 12:20:47] PHP Warning:  file_get_contents(alertcontents.html) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: No such file or directory in /home/grimsley/public_html/alert/ajax/sendmail.php on line 59
+[29-Oct-2013 12:59:10] PHP Warning:  Invalid argument supplied for foreach() in /home/grimsley/public_html/alert/ajax/sendmail.php on line 89
+[29-Oct-2013 13:15:40] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user 'grimsley'@'localhost' (using password: NO) in /home/grimsley/public_html/alert/ajax/sendmail.php on line 88
+[29-Oct-2013 13:15:40] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home/grimsley/public_html/alert/ajax/sendmail.php on line 88
+[29-Oct-2013 13:16:16] PHP Fatal error:  Uncaught exception 'TwitterException' with message 'Status is a duplicate.' in /home/grimsley/public_html/alert/twitter/twitter.class.php:247
+Stack trace:
+#0 /home/grimsley/public_html/alert/twitter/twitter.class.php(102): Twitter->request('statuses/update', 'POST', Array)
+#1 /home/grimsley/public_html/alert/ajax/sendmail.php(45): Twitter->send('Everything Up??...')
+#2 {main}
+  thrown in /home/grimsley/public_html/alert/twitter/twitter.class.php on line 247
+[29-Oct-2013 16:05:59] PHP Parse error:  syntax error, unexpected ')' in /home/grimsley/public_html/alert/ajax/changepw.php on line 19
+[29-Oct-2013 16:25:46] PHP Parse error:  syntax error, unexpected ':', expecting ',' or ';' in /home/grimsley/public_html/alert/ajax/changepw.php on line 42
+[29-Oct-2013 16:48:30] PHP Parse error:  syntax error, unexpected '{' in /home/grimsley/public_html/alert/ajax/changepw.php on line 5
+[29-Oct-2013 16:48:32] PHP Parse error:  syntax error, unexpected '{' in /home/grimsley/public_html/alert/ajax/changepw.php on line 5
+[29-Oct-2013 16:48:38] PHP Parse error:  syntax error, unexpected '{' in /home/grimsley/public_html/alert/ajax/changepw.php on line 5
+[29-Oct-2013 16:48:39] PHP Parse error:  syntax error, unexpected '{' in /home/grimsley/public_html/alert/ajax/changepw.php on line 5
+[29-Oct-2013 16:48:41] PHP Parse error:  syntax error, unexpected '{' in /home/grimsley/public_html/alert/ajax/changepw.php on line 5
+[29-Oct-2013 16:48:50] PHP Parse error:  syntax error, unexpected '{' in /home/grimsley/public_html/alert/ajax/changepw.php on line 5
+[29-Oct-2013 16:48:51] PHP Parse error:  syntax error, unexpected '{' in /home/grimsley/public_html/alert/ajax/changepw.php on line 5
+[29-Oct-2013 21:30:11] PHP Parse error:  syntax error, unexpected '[', expecting ',' or ';' in /home/grimsley/public_html/alert/ajax/store_var.php on line 10

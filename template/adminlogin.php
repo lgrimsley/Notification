@@ -13,11 +13,11 @@
 
 
 
-					<span class="vmiddle btntxt " style='font-weight:bold; '>C</span>
+					<span class="vmiddle lbtntxt " style='font-weight:bold; '>C</span>
 
 
 
-				</div>
+				</div> 
 
 
 
@@ -25,28 +25,19 @@
 
 
 
-					<div class="vmiddle btntxt" style="text-align:right; font-size:2em; text-align:right;" id="calc"></div>
+					<div class="vmiddle lbtntxt" style="text-align:right; font-size:2em; text-align:right;" id="calc"></div>
 
 
 
 				</div>
 			</div>
 
-
-
-	
-
-
-
-
-
-
 			<div class='buttonholder'>
 				<div  class='btn btn-lg btn-primary button col-md-4' id="1">
 
 
 
-					<span class="vmiddle btntxt ">1</span>
+					<span class="vmiddle lbtntxt ">1</span>
 
 
 
@@ -58,7 +49,7 @@
 
 
 
-					<span class="vmiddle btntxt ">2</span>
+					<span class="vmiddle lbtntxt ">2</span>
 
 
 
@@ -70,7 +61,7 @@
 
 
 
-					<span class="vmiddle btntxt ">3</span>
+					<span class="vmiddle lbtntxt ">3</span>
 
 
 
@@ -89,7 +80,7 @@
 
 
 
-					<span class="vmiddle btntxt">4</span>
+					<span class="vmiddle lbtntxt">4</span>
 
 
 
@@ -101,7 +92,7 @@
 
 
 
-					<span class="vmiddle btntxt">5</span>
+					<span class="vmiddle lbtntxt">5</span>
 
 
 
@@ -113,7 +104,7 @@
 
 
 
-					<span class="vmiddle btntxt">6</span>
+					<span class="vmiddle lbtntxt">6</span>
 
 
 
@@ -133,7 +124,7 @@
 
 
 
-					<span class="vmiddle btntxt"> 7</span>
+					<span class="vmiddle lbtntxt"> 7</span>
 
 
 
@@ -145,7 +136,7 @@
 
 
 
-					<span class="vmiddle btntxt"> 8</span>
+					<span class="vmiddle lbtntxt"> 8</span>
 
 
 
@@ -157,7 +148,7 @@
 
 
 
-					<span class="vmiddle btntxt"> 9</span>
+					<span class="vmiddle lbtntxt"> 9</span>
 
 
 
@@ -178,7 +169,7 @@
 
 
 
-					<span class="vmiddle btntxt " style="text-align:right;  display:table-cell;">0</span>
+					<span class="vmiddle lbtntxt " style="text-align:right;  display:table-cell;">0</span>
  
 
 
@@ -190,7 +181,7 @@
 
 
 
-					<center><span class="vmiddle btntxt" >=</span>
+					<center><span class="vmiddle lbtntxt" >=</span>
 
 
 

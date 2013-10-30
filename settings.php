@@ -9,6 +9,12 @@ if(!$_SESSION['admin']){
 }else{
 
 
+dbconnect();
+$query = mysql_query("SELECT `value` FROM `settings` WHERE `type`='alerturl' AND `current`='yes'");
+$alerturl = mysql_fetch_assoc($query) or die(mysql_error());
+
+$alerturl = $alerturl['value']; 
+
 ?>
 
 
@@ -100,22 +106,22 @@ if(!$_SESSION['admin']){
 					</a>
 				</div>
 				<div class="panel panel-info btn-info">
-					<a href='' >
+					<a href='#subscribers' data-toggle='modal'>
 					  <div class="panel-body settingspanel row">
-					    <span class='col-md-4'>
-					    	Edit Subscribers
+					    <span class='col-md-6'>
+					    	Delete Subscribers
 			  			</span>
-			  			<span id='pwresult' class='col-md-8' style='text-align:right'></span>
+			  			<span id='subresult' class='col-md-8' style='text-align:right'></span>
 					  </div>
 					</a>
 				</div>
 				<div class="panel panel-info btn-info">
-					<a href='' >
+					<a href='#url' data-toggle='modal'>
 					  <div class="panel-body settingspanel row">
 					    <span class='col-md-4'>
-					    	Something Else
+					    	Change Alert Link-Back
 			  			</span>
-			  			<span id='pwresult' class='col-md-8' style='text-align:right'></span>
+			  			<span id='alerturlresult' class='col-md-8' style='text-align:right'></span>
 					  </div>
 					</a>
 				</div>
@@ -179,10 +185,6 @@ if(!$_SESSION['admin']){
 			  		<div class='row'>
 			  			<div class='col-md-12 error' style='text-align:center;' id='pwerror'></div>
 			  		</div>
-
-			  	
-
-
 		        </p>
 		      </div>
 		      <div class="modal-footer">
@@ -196,19 +198,150 @@ if(!$_SESSION['admin']){
 		</div><!-- /.modal -->
 
 
+		<div class="modal fade" id="subscribers">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		        <h4 class="modal-title">Delete Subscribers</h4>
+		      </div>
+		      <div style='margin-top:1px; margin-bottom:1px;'>
+		      	<p id='subbody'>
+		        	
+		        </p>
+		        <div id='userdelresult'></div>
+		        <form id='pageid'><input type='hidden' id='page' name='page' value='1'></form>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+		      <div id='pwerror'></div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+
+		<div class="modal fade" id="url">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		        <h4 class="modal-title">Change "View Alert" Link-Back</h4>
+		      </div>
+		      <div class="modal-body">
+		      	<div class='row'>
+		      		<div class='col-md-12'>
+		      			Current Alert Link-Back:
+		      		</div>
+		      	</div>
+		      	<div class='row'>
+		      		<div class='col-md-12'>
+		      			<pre><? echo $alerturl ?></pre>
+		      		</div>
+		      	</div>
+		      	<hr>
+		      	<div class='row'>
+		      		<div class='col-md-4'>
+		      			Text:
+		      		</div>
+		      		<div class='col-md-4'>
+		      			URL:
+		      		</div>
+		      		<div class='col-md-4'>
+		      			Alert ID:
+		      		</div> 
+		      	</div>
+		      	<div class='row input-group'>
+		      		<form id='urlchange'>
+			      		<div class='col-md-5 input-group' style='padding:0px;'>
+			      			<input type='text' id='text' name='text' placeholder="Ex: View full alert here: " class='form-control'>
+			      			<span class='input-group-addon'></span>
+			      			
+			      		</div>
+			      		<div class='col-md-4' style='padding:0px;'>
+			      			<input type='text' id='url' placeholder='Ex: www.myalert.com' name='url' class='form-control'>
+			      		</div>
+			      		<div class='col-md-3' style='padding:0px;'>
+			      			<input type='text' id='alertid' name='alertid' disabled class='disabled form-control' value='?i=[alert url]'>
+			      		</div>
+		      		</form>
+		      	</div>
+		        <div id='alerturlerror'></div>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+		        <button type="button" class="btn btn-primary gochangeurl">Apply Changes</button>
+		      </div>
+		      <div id='pwerror'></div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+
+
 
 
 
 			 
 
 	<script>
+
+ 
+
 			$(function () {
 
 				$('#myTab a:first').tab('show');
 
 			  });
 			  
+			$('#subscribers').on('show.bs.modal', function () {
 
+				getPageData();
+
+			})
+
+			function getPageData(){
+
+				var posting = $.ajax({
+					type: "POST",
+					url: "ajax/getsubscribers.php", 
+					data: $("#page").serialize(),
+
+				});
+
+				posting.done(function(data){
+					$("#subbody").html(data);
+				});
+
+				var pgbtn = $(".pgbtn").hammer({
+
+					hold_timeout: 0.000001
+
+				});
+
+			}
+				$(".gochangeurl").click(function(event){
+
+					var $form = $("#urlchange");
+
+					var posting = $.post("ajax/changeurl.php", $form.serialize() );
+
+					posting.done(function(data){
+
+						if(data == "Success "){
+			 			$("#url").modal('toggle');
+
+			 			var getnewurl = $.post("ajax/changeurl.php", {view: true} );
+			 			getnewurl.done(function(data){
+			 				$("#alerturlresult").html(data);
+			 			});
+
+			 			
+			 		}else{
+			 			$("#alerturlerror").html(data);
+			 		}
+
+					});
+
+				});
 
 				$( ".gogogo" ).click(function( event ) {
  
@@ -233,6 +366,8 @@ if(!$_SESSION['admin']){
 
 			    });
 			});
+
+
 
 
 			

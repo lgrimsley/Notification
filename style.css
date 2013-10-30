@@ -33,9 +33,20 @@ html, html a {
 
 
 
-.btntxt {
+.btntxt { 
 
 	font-size:85%;
+	font-weight: bold;
+	font-family: Century Gothic, sans-serif; 
+	white-space: none;
+	vertical-align:middle;
+
+	
+	}
+
+	.lbtntxt { 
+
+	font-size:120%;
 	font-weight: bold;
 	font-family: Century Gothic, sans-serif; 
 	white-space: none;

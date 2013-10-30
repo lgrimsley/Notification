@@ -239,6 +239,8 @@ function emailExists($email){
 
 
 
+
+
 function type($email){
 
 	dbconnect();

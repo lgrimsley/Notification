@@ -92,7 +92,7 @@ foreach($_SESSION['users'] as $user){
 
 		
 
-	$message = preg_replace('#(<!--SURL-->)(.*)(<!--EURL-->)#si', "<a href='http://lgrimsley.com/alert/index.php?a=unsubscribe&email=".$user['email']."'>Click Here</a>", $message);
+	$message = preg_replace('#(<!--SURL-->)(.*)(<!--EURL-->)#si', "<a href='http://lgrimsley.com/alert/index.php?a=unsubscribe&Email=".$user['email']."'>Click Here</a>", $message);
 	$message = preg_replace('#('.$start.')(.*)('.$end.')#si', $content, $message);
 
 	}else{

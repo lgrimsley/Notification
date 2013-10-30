@@ -35,7 +35,7 @@ $html = "
 
                         <div id='".$status."subject' style='display:none; width:100%; padding:0px; margin:0px'>
 
-                            <input type='text' class='input-search form-control pull-left' value='".$subject."'  style='width:90%; height:1.5em; font-size:1.5em; ' name='".$status."select' placeholder='Alert Subject'>
+                            <input type='text' class='input-search form-control pull-left' value='".$subject."'  style='width:90%; height:1.5em; font-size:1.5em; ' name='custom".$status."select' placeholder='Alert Subject'>
                             <div  class='subject btn btn-danger pull-right '><i class='glyphicon glyphicon-remove'></i></div>
                                 
 

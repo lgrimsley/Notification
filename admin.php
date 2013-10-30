@@ -71,13 +71,13 @@ if(!$_SESSION['admin']){
 
 <?
 
-		//IMPORTANT
-		//The following will be appended to each text/tweet send to link back to the alert. 
-		//Edit this if the hostname or alert location changes
-
-		$alerturl = "Visit www.lgrimsley.com/alert/a/?i=" . $_SESSION['alert']['id'] . " for more info"; 
 
 
+		dbconnect();
+		$query = mysql_query("SELECT `value` FROM `settings` WHERE `type`='alerturl' AND `current`='yes'");
+		$alerturl = mysql_fetch_assoc($query) or die(mysql_error());
+		$alerturl = $alerturl['value'];
+		$alerturl = preg_replace("[alert id]", $_SESSION['alert']['id'], $alerturl); 
 
 
 
@@ -158,13 +158,13 @@ if(!$_SESSION['admin']){
 			if($_SESSION['alert']['status'] == "down"){
 					$_SESSION['alert']['tweet'] = "IgLou Outage Affecting:" . "\r\n";
 					foreach($affected as $s){
-					if($s['name'] != 'Announcements'){ 
+						if($s['name'] != 'Announcements'){ 
 
-						$_SESSION['alert']['tweet'] .= "".$s['name']."
-";
+							$_SESSION['alert']['tweet'] .= "".$s['name']."
+	";
+						}
+
 					}
-
-				}
 			}elseif($_SESSION['alert']['status'] == "up"){
 				$_SESSION['alert']['tweet'] = $_SESSION['alert']['subject'] . "\r\n" . $_SESSION['alert']['message'];
 			}else{
