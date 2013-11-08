@@ -82,7 +82,7 @@ function dbconnect(){
 
 	$hostname=  "localhost";
 
-	$dbname = "grimsley_development";
+	$dbname = "grimsley_development";  
 
 	$dbuser = "grimsley_logan";
 
@@ -94,16 +94,126 @@ function dbconnect(){
 
 }
 
+function formatMessage($status, $type, $format = "", $id="", $message = "", $title = "",$footer = "", $subject = "", $services = ""){
 
-function appendString($string, $toappend, $charlimit){
+	if($format == ""){
+		$query = mysql_query("SELECT `value` FROM `settings` WHERE `type`='".$status.$type."format' AND `current`='yes'");
+		if(mysql_num_rows($query)){
+			$format = mysql_result($query, 0);
+			$format = explode(",",$format);
+		}else{
+			return "Critical Failure! Improper format found for this message type.";
+		}
+	}
+
+	if($id != "" && $message == "" && $subject == ""){
+		$query = mysql_query("SELECT * FROM `alerts` WHERE `id`='$id'");
+		$alert = mysql_fetch_array($query);
+		$alert['services'] = explode(",", $alert['services']);
+		if($status != ""){
+			$alert['status'] = $status;
+		}
+	}else{
+		if($message == "" || $subject == "" || $services == "" || $status == ""){
+			echo "Could not format message: At least one required field is empty.";
+		}else{
+			$alert['message'] = $message;
+			$alert['subject'] = $subject;
+			$alert['services'] = explode(",",$services);
+			$alert['status'] =  $status;
+		}
+	}
+
+	$m = "";  //Start the message text.
+
+	if(in_array("title", $format)){
+		if(!$title){
+			$tquery = mysql_query("SELECT `value` FROM `settings` WHERE `type`='".$alert['status'].$type."title'");
+			if(mysql_num_rows($tquery)){
+				$title = mysql_result($tquery,0);
+			}else{ $title = ""; }
+		}
+		$m .= $title . "\r\n";
+	}
+	if(in_array("subject", $format)){
+		$m .= $alert['subject']. "\r\n";
+	}
+	if(in_array("message", $format)){
+		$m .= $alert['message']. "\r\n";
+	}
+	if(in_array("services", $format)){
+
+		$squery = mysql_query("SELECT * FROM `services`") or die(mysql_error());
+
+		$i = 0;
+		$affected = array();
+
+		while($serv = mysql_fetch_array($squery)){ //Compile all affected services into array
+
+			if(in_array($serv['id'], $alert['services'])){
+
+				$affected[$i] = $serv;
+
+				$i++;
+
+			}
+
+		}
+
+
+		foreach($affected as $s){
+						if($s['name'] != 'Announcements'){ 
+
+							$m .= $s['name']."\r\n";
+						}
+
+					}
+
+	}
+
+	if(in_array("footer", $format)){
+		if(!$footer){
+			$tquery = mysql_query("SELECT `value` FROM `settings` WHERE `type`='".$alert['status'].$type."footer'");
+			if(mysql_num_rows($tquery)){
+				$footer = mysql_result($tquery,0);
+			}else{ $footer = ""; }
+		}
+		$m .=  $footer . "\r\n";
+	}
+
+	if(in_array("linkback", $format)){
+		$query = mysql_query("SELECT `value` FROM `settings` WHERE `type`='alerturl' AND `current`='yes'");
+		if(mysql_num_rows($query)){
+			$alerturl = mysql_result($query,0);
+		}else $alerturl = "INVALID_LINKBACK";
+		$alerturl = str_replace("[alert id]", $id, $alerturl); 
+		$m = appendString($m, $alerturl, $type);
+
+	}else{
+
+		$m = appendString($m, "", $type);
+	}
+
+	return $m;
+
+}
+
+
+function appendString($string, $toappend, $type){
+
+	$query = mysql_query("SELECT `value` FROM `settings` WHERE `type`='".$type."charlimit' AND `current`='yes'");
+	if(mysql_num_rows($query)){
+		$charlimit = mysql_result($query, 0);
+	}
 
 	$strlen = strlen($string);
 	$applen = strlen($toappend);
 	if(($strlen + $applen)+2 <= $charlimit){
-		$string .=  "\r\n" . $toappend;
+		$string .= $toappend;
 	}else{
 
 	$string = substr($string, 0, ($charlimit-$applen)-5);
+	$string = trim($string);
 	
 	$string = $string . "..." . "\r\n" . $toappend;
 	}
@@ -215,9 +325,10 @@ function formatEmail($phone, $provider){
 
 function formatPhone($phone){
 
-	$remove = array("(",")"," ", "-");
+	$remove = array("(",")"," ", "-", "_");
 
 	$phone = str_replace($remove,"", $phone);
+
 
 	return $phone;
 
@@ -367,7 +478,7 @@ function showSubscription($email, $disabled, $type = "services"){  //This functi
 
 		} else $userv = array(8);
 
-			$query = mysql_query("SELECT * FROM `services`");
+			$query = mysql_query("SELECT * FROM `services` WHERE `active`='1'");
 
 					
 
@@ -396,35 +507,40 @@ function showSubscription($email, $disabled, $type = "services"){  //This functi
 					unset($checked);
 
 				} 
+				$html .= "<center>
 
-				$html .= "<center><div class='boxes'>
-
-				<div class='$allclass' style='padding:0px !important; height:2em !important;'  id='".$type."div' name='$type' >
+				<button type='button' class='$allclass' style='padding:0px !important; height:2em !important; max-width:500px; width:100%;'  id='".$type."div' name='$type' >
 
 					<span class='btntxt vmiddle'>
 
-						<input type='checkbox'  style='display:none' $checked  id='$type'>
+						
 
 						All <i class='glyphicon glyphicon-retweet'></i> None
 
 					</span>
 
-				</div>";
+				</button>
+				<input type='checkbox' style='display:none;'  $checked  id='$type'>
+				
+				<table style='max-width:500px; width:100%; min-width:320px;'><tr>
+				";
 
 
 
 				}else{
 
-					$html .= "<center><div class='boxes'>";
+					$html .= "<center><table style='max-width:500px; width:100%; min-width:320px;'><tr>";
 
 					$classes = "btn box btntxt disabled ";
 
 				}
 
 				
- 
+ 				
 			while($services = mysql_fetch_array($query)){
-
+				if($c % 2 == 0){
+					$html .= "</tr><tr>";
+				}
 			
 
 			$divid = $type . $c;
@@ -435,21 +551,21 @@ function showSubscription($email, $disabled, $type = "services"){  //This functi
 
 				if(in_array($services['id'], $userv)){                                                                                                                                        
 
-					$html .= "<button type='button' class='".$classes." btn-warning'  style='white-space: inherit;   height:50px;' id='$divid'>
-
-					<span class='btntxt vmiddle'>". $services['name']. "</span>
-
-					<input style='display:none' id='$chkboxid' type='checkbox' checked $disabled name='".$type."[]' value='" . $services['id']. "'>
-
-					</button>";
+					$html .= "
+					<td  style='padding:0px; width:50%;'>
+					<button type='button' class='".$classes." btn-warning'  style='white-space: inherit;   height:50px;' id='$divid'>
+					<span class='btntxt vmiddle'>". $services['name']. "</span></button>
+					<input type='checkbox' style='display:none;'  id='$chkboxid' checked $disabled name='".$type."[]' value='" . $services['id']. "'>
+					</td>";
 
 				}else{
 
-					$html .= "<button type='button' class='".$classes."  btn-default' style='white-space: inherit;height:50px;'  id='$divid' >
-
-					<span class='btntxt vmiddle'>".$services['name']."</span>
-
-					<input style='display:none' id='$chkboxid' type='checkbox' $disabled  name='".$type."[]' value='" . $services['id']. "'></button>";
+					$html .= "
+					<td  style='padding:0px; width:50%; '>
+					<button type='button' class='".$classes."  btn-default' style='white-space: inherit;height:50px;'  id='$divid' >
+					<span class='btntxt vmiddle'>".$services['name']."</span></button>
+					<input type='checkbox' style='display:none;'  id='$chkboxid' $disabled  name='".$type."[]' value='" . $services['id']. "'>
+					</td>";
 
 				}
 
@@ -458,6 +574,7 @@ function showSubscription($email, $disabled, $type = "services"){  //This functi
 				$c++;
 
 			}	
+			$html .= "</tr></table>";
 
 			return $html;
 

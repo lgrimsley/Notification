@@ -1,20 +1,20 @@
-
-
 <?php
+
+session_start();
 
 include("../functions.php");
 
-	dbconnect();
+dbconnect();
+
+if(isset($_SESSION['admin'])){
 
 
-
-	$tbl_name="users";		//your table name
+	$tbl_name="services";		//your table name
 
 	// How many adjacent pages should be shown on each side?
 
 	$adjacents = 3;
 
-	
 
 	/* 
 
@@ -24,7 +24,9 @@ include("../functions.php");
 
 	*/
 
-	$query = "SELECT COUNT(*) as num FROM `$tbl_name`";
+	   	$query = "SELECT COUNT(*) as num FROM `$tbl_name` WHERE `active`='1'";
+
+	
 
 	$total_pages = mysql_fetch_array(mysql_query($query));
 
@@ -34,11 +36,11 @@ include("../functions.php");
 
 	/* Setup vars for query. */
 
-	$targetpage = "admin.php?action=edit"; 	//your file name  (the name of this file)
 
 	$limit = 5; 								//how many items to show per page
 
-	$page = $_POST['page'];
+	$page = $_POST['spage'];
+
 
 	if($page) 
 
@@ -52,8 +54,8 @@ include("../functions.php");
 
 	/* Get data. */
 
-	$sql = "SELECT * FROM `$tbl_name` ORDER BY `email` LIMIT $start, $limit ";
 
+	$sql = "SELECT * FROM `$tbl_name` WHERE `active`='1'  ORDER BY `id` LIMIT $start, $limit ";
 	$result = mysql_query($sql);
 
 	
@@ -86,7 +88,7 @@ include("../functions.php");
 
 	{	
 
-		$pagination .= "<div class=\"pagination\">";
+		$pagination .= "<div style='margin:3px;'>";
 
 		//previous button
 
@@ -234,17 +236,20 @@ include("../functions.php");
 
 	}
 
-	echo $pagination;
+	echo "<center>" . $pagination . "</center>";
 
 	?>
-
-	<table class='table table-striped'>
-
-		<th>Email Address</th>
-
-		<th>Email / Phone</th>
-
-		<th>Delete</th>
+	<table class='table table-striped table-condensed'>
+	<tr>
+		<td>
+			<table>
+				<tr>
+					<th style='width:75%'>Subscription</th>
+					<th style='width:15%'>Edit/Delete</th>
+				</tr>
+			</table>
+		</td>
+	</tr>
 
 	<?php
 
@@ -256,19 +261,29 @@ include("../functions.php");
 
 	?>
 
-	<tr>
-
-		<td><? echo $row['email'] ?></td>
-
-		<td><? echo $row['type'] ?></td>
-
+	<tr> 
 		<td>
+			<form id='m<? echo $row['id'] ?>'>
+				<table width='100%'>
+					<tr>
+						<td style='width:75%'>
+							<input type='text' style='display:none;' name='service' value='<? echo $row['name'] ?>' class='form-control form<? echo $row['id'] ?>' width='100%'>
+							<pre style='margin:0px;' class='display<? echo $row['id'] ?>'><? echo $row['name'] ?></pre>
+						</td>
 
-			<button class='btn btn-sm btn-danger delete' id='<? echo $row['id'] ?>'><i class='glyphicon glyphicon-remove'></i></button>
-			<button class='btn btn-sm btn-danger delconfirm' style='display:none;' name='<? echo $row['id'] ?>' id='delconfirm<? echo $row['id'] ?>'><i class='glyphicon glyphicon-trash'></i></button>
-
+						<td style='width:20%'>
+							<button type='button' class='btn btn-sm btn-success submitedit form<? echo $row['id'] ?>' name='<? echo $row['id'] ?>' style='display:none;'><i class='glyphicon glyphicon-floppy-disk'></i></button>
+							<button type='button' class='btn btn-sm btn-success edit display<? echo $row['id'] ?>' name='<? echo $row['id'] ?>'><i class='glyphicon glyphicon-pencil'></i></button>
+							<button type='button' class='btn btn-sm btn-info canceledit form<? echo $row['id'] ?>' name='<? echo $row['id'] ?>' style='display:none;'><i class='glyphicon glyphicon-floppy-remove'></i></button>
+							<button type='button' class='btn btn-sm btn-danger delete display<? echo $row['id'] ?>' name='<? echo $row['id'] ?>'><i class='glyphicon glyphicon-remove'></i></button>
+							<button type='button' class='btn btn-sm btn-danger delconfirm' id='delconfirm<? echo $row['id'] ?>' name='<? echo $row['id'] ?>' style='display:none;'><i class='glyphicon glyphicon-trash'></i></button>
+							<input type='hidden' name='id' value='<? echo $row['id'] ?>'>
+							
+						</td>
+					</tr>
+				</table>
+			</form>
 		</td>
-
 	</tr>
 
 	<?php
@@ -282,42 +297,31 @@ include("../functions.php");
 	</table>
 
 
-
+<center>
 <?=$pagination?>
-
+</center>
 
 
 <script>
 
 			var pgbtn = $(".pgbtn").hammer({
 
-
-
 					hold_timeout: 0.000001
 
-
-
 				});
-
-			
-
-
-
-
 
 			pgbtn.on("hold", function(ev){
 
 				var page = $(this).attr("id");
 
-				$("#page").attr("value", page)
+				$("#spage").attr("value", page)
 
-				getPageData();
+				getSubs();
 
 			});
 
 
-
-			var deluser = $(".delete").hammer({
+			var delsub = $(".delete").hammer({
 
 				hold_timeout:0.000001
 
@@ -325,9 +329,9 @@ include("../functions.php");
 
 
 
-			deluser.on("hold", function(ev){
+			delsub.on("hold", function(ev){
 
-				var id = $(this).attr("id");
+				var id = $(this).attr("name");
 				$(this).hide();
 				$("#delconfirm"+id).show(); 
 
@@ -339,29 +343,87 @@ include("../functions.php");
 
 			});
 
-
-
 			delconfirm.on("hold", function(ev){
 
-
+				    
 					var id = $(this).attr("name");
 
-					posting = $.post("ajax/deluser.php", {id: id});
 
+					posting = $.post("ajax/delsubs.php", {id: id});
+				
 					posting.done(function(data){
-
-						var currpage = $("#page").attr("value");
+						var currpage = $("#spage").attr("value");
 						if(currpage > 1){
-							$("#page").attr("value", currpage-1);
+							$("#spage").attr("value", currpage-1);
 						}
-
-						$("#userdelresult").html(data);
-
+						getSubs();
 					});
+				
+
+				
+
+			});
+
+			var edit = $(".edit").hammer({
+
+				hold_timeout:0.000001
+			});
+
+			edit.on("hold", function(ev){
+				var id = $(this).attr("name");
+				$(".form"+id).show();
+				$(".display"+id).hide();
+
+			});
+
+			var canceledit = $(".canceledit").hammer({
+
+				hold_timeout:0.000001
+			});
+
+			canceledit.on("hold", function(ev){
+				var id = $(this).attr("name");
+				$(".form"+id).hide();
+				$(".display"+id).show();
 
 			});
 
 
-</script>
 
+			var submitedit = $(".submitedit").hammer({
+
+				hold_timeout:0.000001
+
+			});
+
+
+			submitedit.on("hold", function(ev){
+
+				var id = $(this).attr("name");
+				console.log("#m"+id);
+				var $subform = $("#m"+id);
+
+
+				posting = $.post("ajax/editsubs.php", $subform.serialize());
+
+				posting.done(function(data){
+
+					$("#subserror").html(data);
+
+				});
+
+
+
+			});
+
+
+
+
+
+
+
+</script>
+<?
+}
+?>
 	

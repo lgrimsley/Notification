@@ -15,39 +15,10 @@
 		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="bootstrap_full/dist/css/bootstrap-theme.min.css">
    		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>	
-   		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-select.css">
-   		<script src="bootstrap/js/bootstrap-select.js"></script>
-
-
-			<!--Boot Strap 3.0's Ridiculous Quantity of Includes.
-		<link rel="stylesheet" type="text/css" href="bootstrap_full/dist/css/bootstrap.min.css">
-		
-		<link rel="stylesheet" type="text/css" href="bootstrap_full/dist/css/bootstrap-theme.min.css">
-		<script src="bootstrap/js/bootstrap.min.js"></script>
-		
-		<script src="bootstrap/js/alert.js"></script>
-		<script src="bootstrap/js/affix.js"></script>
-		<script src="bootstrap/js/button.js"></script>
-		<script src="bootstrap/js/carousel.js"></script>
-		<script src="bootstrap/js/collapse.js"></script> 
-		<script src="bootstrap/js/dropdown.js"></script>
-		<script src="bootstrap/js/modal.js"></script>
-		<script src="bootstrap/js/popover.js"></script>
-		<script src="bootstrap/js/scrollspy.js"></script> 
-		<script src="bootstrap/js/tab.js"></script>
-		<script src="bootstrap/js/tooltip.js"></script>
-		<script src="bootstrap/js/transition.js"></script>
-		 -->
 
 		<script src="js/jquery.validate.min.js"></script>
 
-		<script src="http://jquery.bassistance.de/validate/additional-methods.js"></script>
-
-		
-
 		<script src="js/hammer.js"></script>
-
-		<script src="js/jquery.jeditable.mini.js"></script>
 
 		<script src="js/jquery.hammer.js"></script>
 
@@ -70,6 +41,8 @@
 				margin:2px;
 
 				background-color: #f5f5f5;
+				background-image: url("img/tweed.png");
+				background-repeat: repeat;
 
 			  }
 

@@ -13,8 +13,6 @@
 		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="bootstrap_full/dist/css/bootstrap-theme.min.css">
    		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>	
-   		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-select.css">
-   		<script src="bootstrap/js/bootstrap-select.js"></script>
 
 
 			<!--Boot Strap 3.0's Ridiculous Quantity of Includes.
@@ -33,35 +31,33 @@
 		<script src="bootstrap/js/popover.js"></script>
 		<script src="bootstrap/js/scrollspy.js"></script> 
 		<script src="bootstrap/js/tab.js"></script>
-		<script src="bootstrap/js/tooltip.js"></script>
+		<script src="bootstrap/js/tooltip.js"></script> 
 		<script src="bootstrap/js/transition.js"></script>
 		 -->
 
-		<script src="js/jquery.validate.min.js"></script>
-
-		<script src="http://jquery.bassistance.de/validate/additional-methods.js"></script>
+		<script src="js/jquery.validate.min.js"></script> 
 
 		<script src="js/hammer.js"></script>
-
+ 
 		<script src="js/jquery.hammer.js"></script> 
 
 
 
 		<script src="js/common.js"></script>
 
-		<style type="text/css">
+		<style type="text/css"> 
 
-			  body {
+			  body { 
 
 				padding-top: 15px;
 
 				padding-bottom: 15px;
-
-				background-color: #5C5C5C;
-
+				background-color: #2683CE;
+				background-image: url("img/bg3.jpg");
+				background-repeat: repeat-y;
+				background-size: 100%;
 
 			  }
-
 
 
 			  .form-signin {

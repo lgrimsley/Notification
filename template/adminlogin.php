@@ -2,11 +2,11 @@
 
 
 
-	<div class="row col-md-12" id='calcformstyle'>
+	<div class="row col-md-12" id='calcformstyle' style='box-shadow: 2px 2px 5px #000000; '>
 
 
 
-		<form  id='calcform'>
+		<form  id='calcform' >
 
 			<div class='buttonholder'>
 				<div  class='btn btn-lg btn-primary col-md-4 ' style="min-width:83px !important;min-height:83px !important;padding: 10% 2% 2% 2% !important; " id="clear">
@@ -19,7 +19,7 @@
 
 				</div> 
 
-
+ 
 
 				<div  class='btn btn-lg btn-default col-md-8' disabled style="min-width:170px !important;min-height:83px !important;padding:0px !important;padding-bottom:2% !important; " >
 

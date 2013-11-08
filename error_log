@@ -897,3 +897,36 @@ Stack trace:
 [29-Oct-2013 16:28:31] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/grimsley/public_html/alert/template/adminheader.php:14) in /home/grimsley/public_html/alert/settings.php on line 8
 [29-Oct-2013 16:42:09] PHP Fatal error:  Call to undefined function getDefaultMessages() in /home/grimsley/public_html/alert/settings.php on line 127
 [29-Oct-2013 16:42:17] PHP Fatal error:  Call to undefined function getDefaultMessages() in /home/grimsley/public_html/alert/settings.php on line 127
+[30-Oct-2013 10:18:32] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user 'grimsley'@'localhost' (using password: NO) in /home/grimsley/public_html/alert/functions.php on line 242
+[30-Oct-2013 10:18:32] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home/grimsley/public_html/alert/functions.php on line 242
+[30-Oct-2013 10:18:32] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/grimsley/public_html/alert/functions.php on line 243
+[30-Oct-2013 10:18:32] PHP Warning:  include(pagination.class.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/grimsley/public_html/alert/functions.php on line 248
+[30-Oct-2013 10:18:32] PHP Warning:  include(pagination.class.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/grimsley/public_html/alert/functions.php on line 248
+[30-Oct-2013 10:18:32] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening 'pagination.class.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/grimsley/public_html/alert/functions.php on line 248
+[30-Oct-2013 10:18:58] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user 'grimsley'@'localhost' (using password: NO) in /home/grimsley/public_html/alert/functions.php on line 242
+[30-Oct-2013 10:18:58] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home/grimsley/public_html/alert/functions.php on line 242
+[30-Oct-2013 10:18:58] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/grimsley/public_html/alert/functions.php on line 243
+[30-Oct-2013 10:18:58] PHP Warning:  include(pagination.class.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/grimsley/public_html/alert/functions.php on line 248
+[30-Oct-2013 10:18:58] PHP Warning:  include(pagination.class.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/grimsley/public_html/alert/functions.php on line 248
+[30-Oct-2013 10:18:58] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening 'pagination.class.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/grimsley/public_html/alert/functions.php on line 248
+[30-Oct-2013 10:19:17] PHP Warning:  include(pagination.class.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/grimsley/public_html/alert/functions.php on line 249
+[30-Oct-2013 10:19:17] PHP Warning:  include(pagination.class.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/grimsley/public_html/alert/functions.php on line 249
+[30-Oct-2013 10:19:17] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening 'pagination.class.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/grimsley/public_html/alert/functions.php on line 249
+[30-Oct-2013 10:19:27] PHP Warning:  include(template/pagination.class.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/grimsley/public_html/alert/functions.php on line 249
+[30-Oct-2013 10:19:27] PHP Warning:  include(template/pagination.class.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/grimsley/public_html/alert/functions.php on line 249
+[30-Oct-2013 10:19:27] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening 'template/pagination.class.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/grimsley/public_html/alert/functions.php on line 249
+[30-Oct-2013 10:19:32] PHP Warning:  include(template/pagination.class.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/grimsley/public_html/alert/functions.php on line 249
+[30-Oct-2013 10:19:32] PHP Warning:  include(template/pagination.class.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/grimsley/public_html/alert/functions.php on line 249
+[30-Oct-2013 10:19:32] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening 'template/pagination.class.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/grimsley/public_html/alert/functions.php on line 249
+[30-Oct-2013 10:25:45] PHP Parse error:  syntax error, unexpected '}' in /home/grimsley/public_html/alert/functions.php on line 274
+[30-Oct-2013 12:07:01] PHP Fatal error:  Call to undefined function getSubscribers() in /home/grimsley/public_html/alert/settings.php on line 204
+[30-Oct-2013 17:06:50] PHP Parse error:  syntax error, unexpected '<' in /home/grimsley/public_html/alert/settings.php on line 11
+[31-Oct-2013 09:33:55] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user 'grimsley'@'localhost' (using password: NO) in /home/grimsley/public_html/alert/settings.php on line 12
+[31-Oct-2013 09:33:55] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home/grimsley/public_html/alert/settings.php on line 12
+[31-Oct-2013 09:33:55] PHP Warning:  mysql_fetch_assoc(): supplied argument is not a valid MySQL result resource in /home/grimsley/public_html/alert/settings.php on line 13
+[31-Oct-2013 17:57:17] PHP Parse error:  syntax error, unexpected '}' in /home/grimsley/public_html/alert/functions.php on line 431
+[31-Oct-2013 21:26:04] PHP Parse error:  syntax error, unexpected $end in /home/grimsley/public_html/alert/index.php on line 86
+[31-Oct-2013 21:26:55] PHP Parse error:  syntax error, unexpected $end in /home/grimsley/public_html/alert/index.php on line 86
+[31-Oct-2013 21:41:29] PHP Parse error:  syntax error, unexpected ')' in /home/grimsley/public_html/alert/index.php on line 30
+[31-Oct-2013 21:41:38] PHP Parse error:  syntax error, unexpected ')' in /home/grimsley/public_html/alert/index.php on line 30
+[31-Oct-2013 22:29:01] PHP Parse error:  syntax error, unexpected '{' in /home/grimsley/public_html/alert/index.php on line 45

@@ -20,6 +20,8 @@ $phone = formatPhone($phone);
 
 if(!$type) $type = $_POST['type'];
 
+if(!$_POST['type'] && !$_GET['l_t']) $type = "Email";
+
 if(!$email) $email = $_POST['Email'];
 
 if(!$email && $phone && $type ="Text") $email = formatEmail($phone, $provider);
@@ -27,21 +29,48 @@ if(!$email && $phone && $type ="Text") $email = formatEmail($phone, $provider);
 $services = $_POST['services'];
 
 
+if(!$email && !$phone){
 
-if($action != "" && check_email_address($email)){
+	include("template/emailform.php");
+
+}elseif( $type == "Email" && !check_email_address($email)){
+	
+	include("template/emailform.php");
+
+	echo "<center>
+	<div class='alert alert-danger alert-dismissable' style='max-width:440px;'>
+	<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
+	<strong>Input Verification Failure!</strong> <br>
+	The email address you provided was improperly formatted. Please try again.
+	</div>";
+
+}elseif(($type == "Text" && !strlen($phone) == 10) || ($type == "Text" && !is_numeric($phone))){
+
+	include("template/emailform.php");
+
+	echo "<center>
+	<div class='alert alert-danger alert-dismissable' style='max-width:440px;'>
+	<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
+	<strong>Input Verification Failure!</strong> <br>
+	The phone number you provided was improperly formatted. Please try again.
+	</div>";
+}else{
+
+
+if($action != ""){
 
 ?> 
 
 <center>
 	<div  style=" width:100%; padding:0px; margin:0px;">
 
-		<div class='well ' style="padding:0px; padding-bottom: 5%; text-align:left;width:100%; max-width:750px; min-width:305px;background-color:white; border-color:#eb9316; border: 3px;" >
+		<div class='well ' style="padding:0px;box-shadow: 2px 2px 5px #000000; padding-bottom: 5%; text-align:left;width:100%; max-width:750px; min-width:305px;background-color:white; border-color:#eb9316; border: 3px;" >
 
 
 
 <?
 
-}
+
 
 
 
@@ -72,7 +101,8 @@ if($action == "unsubscribe"){
 }
 
 
-
+}
+}
 //footer
 
 include("template/footer.php"); 

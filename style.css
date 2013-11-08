@@ -5,12 +5,16 @@ html, html a {
     font-family: Century Gothic, sans-serif;
 }
 
+.tablink{
 
+
+}
 .tabpadding{
 
 	padding: 10px 1px !important;
 	text-align:center;
-
+	border: 1px solid whiteSmoke !important;
+	color:whiteSmoke;
 
 }
 
@@ -120,7 +124,7 @@ font-weight:bold;
 cursor:pointer;
 
 height:18%;
-width:98.5%;
+width:100%;
 
 cursor:hand;
 
@@ -129,9 +133,8 @@ cursor:hand;
 .box{
 
 
-
-width:49%;
-
+width:100%;
+border: 0px;
 height:15%;
 padding:0px !important; 
 padding-bottom:2% !important;

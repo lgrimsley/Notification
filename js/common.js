@@ -42,11 +42,26 @@ $(document).ready(function(){
 
 			
 
-			clear.on("hold", function(ev){
+			clear.on("hold, click, tap", function(ev){
 
-				document.getElementById('val').value = "";
+				$("#val").attr("value","");
+				$("#calc").attr("value","");
 
-				document.getElementById('calc').innerHTML = "";
+			});
+
+			var notyou = $("#notyou").hammer({
+
+				hold_timeout: 0.000001
+
+			});
+
+			
+
+			
+
+			notyou.on("hold, click, tap", function(ev){
+
+				window.location='index.php';
 
 			});
 
@@ -62,7 +77,7 @@ $(document).ready(function(){
 
 			
 
-			submit.on("hold", function(ev){
+			submit.on("hold, click, tap", function(ev){
 
 				$("#calcform").submit();
 
@@ -82,15 +97,16 @@ $(document).ready(function(){
 
 			// add multiple event listeners on the selector.
 
-			hammertime.on("hold", function(ev) {
+			hammertime.on("hold, click, tap", function(ev) {
 
-				login = document.getElementById('val');
+				var login = $("#val").attr('value');
 
-				calc = document.getElementById('calc');
+				var calc = $("#calc").html();
 
-				login.value += $(this).attr('id');
+				var id = $(this).attr('id');
 
-				calc.innerHTML += $(this).attr('id');
+				$("#calc").html(calc + id);
+				$("#val").attr("value", calc+id);
 
 			});
 
@@ -104,7 +120,7 @@ $(document).ready(function(){
 
 			
 
-			checkoption.on("hold click tap", function(ev) {
+			checkoption.on(" tap", function(ev) {
 				ev.preventDefault();
 				selectX($(this).attr('id'), 'x'+$(this).attr('id'));
 
@@ -113,52 +129,20 @@ $(document).ready(function(){
 			
 
 			var checkall = $(".allbox").hammer({
-
+				
 				hold_timeout: 0.000001
 
 			});
 
 			
 
-			checkall.on("hold", function(ev) {
-
+			checkall.on(" tap", function(ev) {
+				ev.preventDefault();
 				checkBox($(this).attr('id'), $(this).attr('name'));
 
 			});	
 
-			
-
-			var switchscreen = $(".ibutton").hammer({
-
-				hold_timeout: 0.000001
-
-			});
-
-			
-
-			switchscreen.on("hold", function(ev) {
-
-					if($(this).attr('value') == '^'){
-
-						showup();
-
-					}else if($(this).attr('value') == '?'){
-
-						showinfo();
-
-					}else{
-
-						showdown();
-
-					}
-
-					
-
-			});
-
-			
-
-			
+	
 
 			$("#upselect").change(function() {
 
@@ -387,28 +371,35 @@ $(document).ready(function(){
 
 		function checkBox(div, type){
 
-			div = document.getElementById(div);
+			div = $("#"+div);
 
-			y = document.getElementById(type);
+			y = $("#"+type);
+		
+			if(y.prop("checked")){
+				y.prop("checked", false);
+				
+			}else{
+				y.prop("checked",true);
+			
+			}
 
-			y.checked = !y.checked;
-
-			if(y.checked) { 
-
+			if(y.prop("checked")) { 
+	
 				$(div).addClass('btn-warning');
 				$(div).removeClass('btn-default');
 
 			} else {
+		
 				$(div).removeClass('btn-warning');
 				$(div).addClass('btn-default');
 			}
 
-			checkboxes = document.getElementsByName(type+'[]');
-
+			
+			 checkboxes =$('[name='+type+'\\[\\]]');
 			for(var i=0, n=checkboxes.length;i<n;i++) {
 
 				//checkboxes[i].checked = y.checked;
-
+			
 				selectX(type+i,checkboxes[i].id, y)
 
 			}
@@ -417,20 +408,36 @@ $(document).ready(function(){
 
 		function selectX(divid, xboxid, y){
 
-			box = document.getElementById(xboxid);
+			box = $("#"+xboxid);
 
-			div = document.getElementById(divid);
+			div = $("#"+divid);
 
-			box.checked = !box.checked;
+			if(y){
+				
+				if(y.prop("checked")){
+					
+					box.prop("checked", true);
+				}else{
+					box.prop("checked", false);
+				}
+			}else{
+			
 
-			if(y){ box.checked = y.checked; }
+				if(box.prop("checked")){
+					box.prop("checked", false);
+				}else{
+					box.prop("checked", true);
+				}
+			}
+			
 
-			if(box.checked) { 
-
+			if(box.prop("checked")) { 
+			
 				$(div).addClass('btn-warning');
 				$(div).removeClass('btn-default');
 
 			} else {
+			
 				$(div).removeClass('btn-warning');
 				$(div).addClass('btn-default');
 			}

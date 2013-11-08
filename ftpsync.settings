@@ -7,13 +7,13 @@
 		"host": "ftp.lgrimsley.com",
 		"username": "grimsley",  // or null for anonymous login
 		"password": "ruh9nuv5",
-		"path": "/public_html/alert/",
+		"path": "/public_html/alert",
 
 		"upload_on_save": true // set *false* if you do not want to upload on save!
 
 		// "port": 21,
 		// "tls": false,
-		// "timeout": 30, // [seconds]
+		// "timeout": 3, // [seconds]
 
 		// "passive": true,
 		// "download_on_open": false,

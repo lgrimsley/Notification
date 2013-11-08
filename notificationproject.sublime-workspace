@@ -4,6 +4,106 @@
 		"selected_items":
 		[
 			[
+				"get",
+				"getcustom"
+			],
+			[
+				"is_nu",
+				"is_numeric"
+			],
+			[
+				"charli",
+				"charlimiterror"
+			],
+			[
+				"ser",
+				"servicelist"
+			],
+			[
+				"msg",
+				"msgpreview"
+			],
+			[
+				"getf",
+				"getFormatOptions"
+			],
+			[
+				"title",
+				"titleform"
+			],
+			[
+				"ch",
+				"changetitle"
+			],
+			[
+				"mysql_fet",
+				"mysql_fetch_array"
+			],
+			[
+				"mysql_n",
+				"mysql_num_rows"
+			],
+			[
+				"mysql_fe",
+				"mysql_fetch_field"
+			],
+			[
+				"mysql_f",
+				"mysql_fetch_field"
+			],
+			[
+				"mysql_fetch",
+				"mysql_fetch_field"
+			],
+			[
+				"custom",
+				"customtitle"
+			],
+			[
+				"getForma",
+				"getFormatOptions"
+			],
+			[
+				"format",
+				"formatbody"
+			],
+			[
+				"newsu",
+				"newsubform"
+			],
+			[
+				"gonew",
+				"gonewsub"
+			],
+			[
+				"re",
+				"remove"
+			],
+			[
+				"isnu",
+				"is_numeric"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"background",
+				"background-image"
+			],
+			[
+				"twitt",
+				"twittererror"
+			],
+			[
+				"twit",
+				"twittererror"
+			],
+			[
+				"replac",
+				"preg_replace"
+			],
+			[
 				"newp",
 				"newpwc"
 			],
@@ -12,20 +112,12 @@
 				"border-bottom-color"
 			],
 			[
-				"ser",
-				"services"
-			],
-			[
 				"prin",
 				"print_r"
 			],
 			[
 				"mysql_fetch_",
 				"mysql_fetch_row"
-			],
-			[
-				"mysql_fetch",
-				"mysql_fetch_assoc"
 			],
 			[
 				"mysql_fetch_a",
@@ -63,6 +155,97 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "settings.php",
+			"settings":
+			{
+				"buffer_size": 26652,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "ajax/getformat.php",
+			"settings":
+			{
+				"buffer_size": 2628,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<?php\n\nsession_start();\n\n\nif(isset($_SESSION['admin'])){\n	include(\"../functions.php\");\n\n	dbconnect();\n\n	$type = $_POST['type'];\n	$status = $_POST['status'];\n\n\n	if($_POST['format']){\n		$format = $_POST['format'];\n	}else{\n		$query = mysql_query(\"SELECT `value` FROM `settings` WHERE `type`='\".$status.$type.\"format' AND `current`='yes'\");\n		if(mysql_num_rows($query)){\n			$format = mysql_result($query, 0);\n		} else{\n			$format = \"\";\n		}\n		$format = explode(\",\",$format);\n	}\n\n		if(in_array(\"title\", $format)) $titlestatus = \"active\";\n		if(in_array(\"subject\", $format)) $subjectstatus = \"active\";\n		if(in_array(\"message\", $format)) $messagestatus = \"active\";\n		if(in_array(\"footer\", $format)) $footerstatus = \"active\";\n		if(in_array(\"services\", $format)) $servicesstatus = \"active\";\n		if(in_array(\"linkback\", $format)) $linkbackstatus = \"active\";\n\n	?>\n\n<center>\n	<form id=\"changeformat\">\n		<div class=\"btn-group pull-center\" data-toggle=\"buttons\"  >\n		  <label class=\"btn btn-info <?echo $titlestatus ?>\" id='title' style='width:150px'>\n		    <input type=\"checkbox\"  class=' changeformat ' id='changetitle' <? if($titlestatus == \"active\") echo \"checked='checked'\"; ?> name='format[]' value='title'>\n		     Custom Header\n		  </label>\n		  <label class=\"btn btn-info <?echo $subjectstatus ?>\" id='subject' style='width:150px'>\n		    <input type=\"checkbox\" class=' changeformat' <? if($subjectstatus == \"active\") echo \"checked='checked'\"; ?> name='format[]' value='subject'>\n		     Subject\n		  </label>\n		  <label class=\"btn btn-info <?echo $messagestatus ?>\" id='message'  style='width:150px'>\n		    <input type=\"checkbox\" class='changeformat' <? if($messagestatus == \"active\") echo \"checked='checked'\"; ?> name='format[]' value='message'>\n		     Message\n		  </label>\n		</div>\n		<div class=\"btn-group pull-center\" data-toggle=\"buttons\">\n		  <label class=\"btn btn-info <?echo $footerstatus ?>\" id='footer'  style='width:150px'>\n		    <input type=\"checkbox\"  class='changeformat ' id='changefooter' <? if($footerstatus == \"active\") echo \"checked='checked'\"; ?> name='format[]' value='footer'>\n		     Custom Footer\n		  </label>	\n		  <label class=\"btn btn-info <?echo $servicesstatus ?>\" id='services'  style='width:150px'>\n		    <input type=\"checkbox\" class=' changeformat' <? if($servicesstatus == \"active\") echo \"checked='checked'\"; ?> name='format[]' value='services'>\n		     Services\n		  </label>\n		  <label class=\"btn btn-info <?echo $linkbackstatus ?>\" id='linkback'  style='width:150px'>\n		    <input type=\"checkbox\" class=' changeformat' <? if($linkbackstatus == \"active\") echo \"checked='checked'\"; ?> name='format[]' value='linkback'>\n		     Link-Back\n		  </label>\n		</div>\n\n		<input type='hidden' name='status' value='<?echo $status?>'>\n		<input type='hidden' name='type' value='<?echo $type?>'>\n	</form>\n</center>\n\n\n	\n		<script>\n\n\n\n		flipCustom();\n		getCustom();\n\n			function getMessageFormat(){\n\n				$(\"#msgpreview\").html(\"\");\n				var $form = $(\"#changeformat\");\n				var posting = $.post(\"ajax/getformat.php\", $form.serialize());\n\n				posting.done(function(data){\n					$(\"#msgpreview\").html(data);\n\n				});\n			}\n\n			getMessageFormat();\n\n\n			$(\".changeformat\").change(function(ev){\n				getMessageFormat();\n\n			});\n\n			$(\"#changetitle\").change(function(ev){\n\n				flipCustom();\n\n			});\n			$(\"#changefooter\").change(function(ev){\n\n				flipCustom();\n\n			});\n\n			function flipCustom(){\n\n				var custom = $(\"#customdiv\");\n				var preview = $(\"#previewdiv\");\n\n				if($(\"#changetitle\").prop(\"checked\") || $(\"#changefooter\").prop(\"checked\") ) { \n\n					custom.show();\n					getCustom();\n					preview.removeClass('col-md-12');\n					preview.addClass('col-md-6')\n\n					if($(\"#changetitle\").prop(\"checked\")){\n						$(\".title\").show();\n					}else{\n						$(\".title\").hide();\n					}\n\n					if($(\"#changefooter\").prop(\"checked\")){\n						$(\".footer\").show();\n					}else{\n						$(\".footer\").hide();\n					}\n\n				} else {\n					custom.hide();\n					preview.removeClass('col-md-6');\n					preview.addClass('col-md-12')\n				}\n			}\n\n			\n\n		</script>\n\n	<?\n}else{\n	echo \"Your session has expired. You must login again to access this page <a href='admin.php'>(Click Here)</a>\";\n}\n\n\n?>",
+			"file": "ajax/getformatoptions.php",
+			"file_size": 4518,
+			"file_write_time": 130283181700398840,
+			"settings":
+			{
+				"buffer_size": 4153,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "ajax/getcustom.php",
+			"settings":
+			{
+				"buffer_size": 1126,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "functions.php",
+			"settings":
+			{
+				"buffer_size": 14155,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "admin.php",
+			"settings":
+			{
+				"buffer_size": 10593,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "template/buildalertcontent.php",
+			"settings":
+			{
+				"buffer_size": 4546,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "ajax/sendmail.php",
+			"settings":
+			{
+				"buffer_size": 6954,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/common.js",
+			"settings":
+			{
+				"buffer_size": 5935,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "template/emailform.php",
+			"settings":
+			{
+				"buffer_size": 3980,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "template/services.php",
+			"settings":
+			{
+				"buffer_size": 2104,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -111,7 +294,7 @@
 	},
 	"console":
 	{
-		"height": 182.0
+		"height": 111.0
 	},
 	"distraction_free":
 	{
@@ -124,6 +307,40 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Logan/Documents/GitHub/Notification/ajax/getcharlimit.php",
+		"/C/Users/Logan/Documents/GitHub/Notification/js/common.js",
+		"/C/Users/Logan/Documents/GitHub/Notification/template/adminui.php",
+		"/C/Users/Logan/Documents/GitHub/Notification/template/header.php",
+		"/C/Users/Logan/Documents/GitHub/Notification/template/adminheader.php",
+		"/C/Users/Logan/Documents/GitHub/Notification/template/adminlogin.php",
+		"/C/Users/Logan/Documents/GitHub/Notification/admin.php",
+		"/C/Users/Logan/Documents/GitHub/Notification/template/emailform.php",
+		"/C/Users/Logan/Documents/GitHub/Notification/index.php",
+		"/C/Users/Logan/Documents/GitHub/Notification/template/services.php",
+		"/C/Users/Logan/Documents/GitHub/Notification/settings.php",
+		"/C/Users/Logan/Documents/GitHub/Notification/ajax/newmsg.php",
+		"/C/Users/Logan/Documents/GitHub/Notification/ajax/editmsg.php",
+		"/C/Users/Logan/Documents/GitHub/Notification/functions.php",
+		"/C/Users/Logan/Documents/GitHub/Notification/ajax/getmsg.php",
+		"/C/Users/Logan/Documents/GitHub/Notification/ajax/getsubscribers.php",
+		"/C/Users/Logan/Documents/GitHub/Notification/ftpsync.settings",
+		"/C/Users/Logan/Documents/GitHub/Notification/style.css",
+		"/C/Users/Logan/Documents/GitHub/Notification/ajax/delsubs.php",
+		"/C/Users/Logan/Documents/GitHub/Notification/ajax/newsubs.php",
+		"/C/Users/Logan/Documents/GitHub/Notification/ajax/editsubs.php",
+		"/C/Users/Logan/Documents/GitHub/Notification/ajax/getsubs.php",
+		"/C/Users/Logan/Documents/GitHub/Notification/ajax/delmsg.php",
+		"/C/Users/Logan/Documents/GitHub/Notification/ajax/store_db.php",
+		"/C/Users/Logan/Documents/GitHub/Notification/ajax/store_var.php",
+		"/C/Users/Logan/Documents/GitHub/Notification/img/bg.jpg",
+		"/C/Users/Logan/Documents/GitHub/Notification/ajax/changetwitter.php",
+		"/C/Users/Logan/Documents/GitHub/Notification/ajax/changeurl.php",
+		"/C/Users/Logan/Documents/GitHub/Notification/ajax/deluser.php",
+		"/C/Users/Logan/Documents/GitHub/Notification/ajax/changepw.php",
+		"/C/Users/Logan/Documents/GitHub/Notification/ajax/sendmail.php",
+		"/C/Users/Logan/Documents/GitHub/Notification/twitter/twitter.class.php",
+		"/C/Users/Logan/Documents/GitHub/Notification/template/paginate.php",
+		"/C/Users/Logan/AppData/Local/Temp/Rar$DRa0.352/php-array-pagination-master/example.php",
 		"/C/Users/Logan/Documents/GitHub/Notification/iglou_alert.sublime-project",
 		"/C/Users/Logan/Documents/GitHub/Iglou/alert/style.css",
 		"/C/Users/Logan/Documents/GitHub/Iglou/alert/settings.php",
@@ -189,6 +406,36 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"tap",
+			"id=\"title\"",
+			"id='title'",
+			"$txtmsg",
+			"$textmsg",
+			" id=\"footer\"",
+			"custom",
+			"print_r",
+			"var_d",
+			"getformatdata",
+			"();\n",
+			"\"",
+			"primary",
+			"Apply Changes",
+			"well",
+			"\");\n",
+			"alert",
+			"mpageid",
+			"messages",
+			"targetpage",
+			"\"",
+			"box",
+			"border:",
+			"box",
+			"default",
+			"showsub",
+			"tweet",
+			"append",
+			"btn-info",
+			"btntxt",
 			"wrap",
 			"Settings",
 			"alerturl",
@@ -247,6 +494,11 @@
 		"replace_history":
 		[
 			"'",
+			"info",
+			"'",
+			"btn-info pgbtn",
+			"lbtntxt",
+			"'",
 			"btn-lg",
 			"col-md-12",
 			"'",
@@ -279,8 +531,333 @@
 	"groups":
 	[
 		{
+			"selected": 9,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "settings.php",
+					"settings":
+					{
+						"buffer_size": 26652,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								15277,
+								15277
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 10744.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 0,
+					"file": "settings.php",
+					"settings":
+					{
+						"buffer_size": 26652,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								22417,
+								22417
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 16873.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "ajax/getformat.php",
+					"settings":
+					{
+						"buffer_size": 2628,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								101,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 156.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "ajax/getformatoptions.php",
+					"settings":
+					{
+						"buffer_size": 4153,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4008,
+								4008
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1521.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "ajax/getcustom.php",
+					"settings":
+					{
+						"buffer_size": 1126,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1078,
+								1078
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "functions.php",
+					"settings":
+					{
+						"buffer_size": 14155,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2187,
+								2187
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1157.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "admin.php",
+					"settings":
+					{
+						"buffer_size": 10593,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3094,
+								2728
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1280.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "template/buildalertcontent.php",
+					"settings":
+					{
+						"buffer_size": 4546,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4160.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "ajax/sendmail.php",
+					"settings":
+					{
+						"buffer_size": 6954,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5095,
+								5095
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 3490.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "js/common.js",
+					"settings":
+					{
+						"buffer_size": 5935,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								863,
+								863
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 347.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "template/emailform.php",
+					"settings":
+					{
+						"buffer_size": 3980,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								599,
+								599
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 429.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "template/services.php",
+					"settings":
+					{
+						"buffer_size": 2104,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								381,
+								381
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -338,11 +915,15 @@
 	},
 	"select_project":
 	{
-		"height": 0.0,
+		"height": 500.0,
 		"selected_items":
 		[
+			[
+				"",
+				"/C/Users/Logan/Documents/GitHub/Notify/Notify_Portfolio.sublime-project"
+			]
 		],
-		"width": 0.0
+		"width": 649.0
 	},
 	"show_minimap": true,
 	"show_open_files": true,

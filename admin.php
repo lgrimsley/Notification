@@ -7,7 +7,20 @@ dbconnect();
 
 //end header
 
+?>
 
+<noscript>	
+
+	<div class="alert alert-danger" style=' margin-top:5%; margin-bottom:0%; display:none;' id="otheralert">		
+		<button type="button" class="close" data-dismiss="alert">&times;</button>			  
+		<h4>Javascript Required</h4> 	
+		Javascript is required to view this website. You appear to have it disabled, please enable it to continue. 		
+	</div>		
+</noscript>	
+
+
+
+<?
 
 $action = $_GET['a']; 
 
@@ -28,8 +41,6 @@ if(!$_SESSION['admin']){
 	include("template/adminlogin.php");
 
 }else{
-
-
 
 	if($action == "preview" && isset($_SESSION['alert']['subject']) && isset($_SESSION['alert']['message'])){
 
@@ -77,9 +88,7 @@ if(!$_SESSION['admin']){
 		$query = mysql_query("SELECT `value` FROM `settings` WHERE `type`='alerturl' AND `current`='yes'");
 		$alerturl = mysql_fetch_assoc($query) or die(mysql_error());
 		$alerturl = $alerturl['value'];
-		$alerturl = preg_replace("[alert id]", $_SESSION['alert']['id'], $alerturl); 
-
-
+		$alerturl = str_replace("[alert id]", $_SESSION['alert']['id'], $alerturl); 
 
 
 		if($_SESSION['alert']['status'] == "down"){ 
@@ -98,12 +107,14 @@ if(!$_SESSION['admin']){
 
 		$i = 0;
 		$affected = array();
+		$servicelist = array();
 
 		while($serv = mysql_fetch_array($squery)){ //Compile all affect services into array
 
 			if(in_array($serv['id'], $_SESSION['alert']['services'])){
 
 				$affected[$i] = $serv;
+				$servicelist[] = $serv['id'];
 
 				$i++;
 
@@ -117,69 +128,27 @@ if(!$_SESSION['admin']){
 
 		$_SESSION['alert']['num'] = count($_SESSION['users']);
 
-		
-
-		
-
-		
-
 		$_SESSION['alert']['affected'] = $affected;
 
+		$servicelist = implode(",", $servicelist);
 
 
 
 
 
-
- //For display purposes only. Not sent to next page.	
- if(in_array("Text", $_SESSION['alert']['method'][0])){
-			if($_SESSION['alert']['status'] == "down"){
-					$txtmsg = "IgLou Outage Affecting:" . "\r\n";
-					foreach($affected as $s){
-					if($s['name'] != 'Announcements'){ 
-
-						$txtmsg .= "".$s['name']."
-";
-					}
-
-				}
-			}elseif($_SESSION['alert']['status'] == "up"){
-				$txtmsg = $_SESSION['alert']['subject'] . "\r\n" . $_SESSION['alert']['message'];
-			}else{
-				$txtmsg = $_SESSION['alert']['message'];
-
-			}
-
-			$txtmsg = appendString($txtmsg, $alerturl, 140);
+ 		//For display purposes only. Not sent to next page.	
+ 		if(in_array("Text", $_SESSION['alert']['method'][0])){
+			$txtmsg = formatMessage($_SESSION['alert']['status'], "Text", "", $_SESSION['alert']['id'], $_SESSION['alert']['message'], "", "", $_SESSION['alert']['subject'], $servicelist);
 
 		}
+
+
 
 		if(in_array("Twitter", $_SESSION['alert']['method'][0])){
-			if($_SESSION['alert']['status'] == "down"){
-					$_SESSION['alert']['tweet'] = "IgLou Outage Affecting:" . "\r\n";
-					foreach($affected as $s){
-						if($s['name'] != 'Announcements'){ 
-
-							$_SESSION['alert']['tweet'] .= "".$s['name']."
-	";
-						}
-
-					}
-			}elseif($_SESSION['alert']['status'] == "up"){
-				$_SESSION['alert']['tweet'] = $_SESSION['alert']['subject'] . "\r\n" . $_SESSION['alert']['message'];
-			}else{
-				$_SESSION['alert']['tweet'] = $_SESSION['alert']['message'] . $alerturl;
-
-			}
-
-			$_SESSION['alert']['tweet'] = appendString($_SESSION['alert']['tweet'], $alerturl, 140);
-			$tweet = $_SESSION['alert']['tweet'];
+			$tweet = formatMessage($_SESSION['alert']['status'], "Twitter", "", $_SESSION['alert']['id'], $_SESSION['alert']['message'], "", "", $_SESSION['alert']['subject'], $servicelist);
+			$_SESSION['alert']['tweet'] = $tweet;
 		}
 
-
-
-
-		
 
 		include("template/buildalertcontent.php");      //This file builds the content of the HTML email and saves 
 
@@ -187,16 +156,16 @@ if(!$_SESSION['admin']){
 
 ?>
 
-				<div class='row' style='max-width:500px; padding:0px; margin:0px;'>
-					<ul class="nav nav-tabs" id="preTab" style="margin:0px;">
+				<div class='row' style='max-width:500px;  padding:0px; margin:0px;'>
+					<ul class="nav nav-tabs" id="preTab" style="margin:0px; border-bottom:0px !important;">
 				<?php
 					foreach($_SESSION['alert']['method'][0] as $method){
 				?>
 
 				
-						<li >
+						<li style='width:20%'>
 
-							<a href="#<?echo $method ?>">
+							<a href="#<?echo $method ?>" class='tabpadding'>
 
 							<strong><? echo $method ?></strong>
 
@@ -210,9 +179,9 @@ if(!$_SESSION['admin']){
 						}
 
 					?>
-						<li >
+						<li style='width:20%'>
 
-							<a href="admin.php">
+							<a href="admin.php"  class='tabpadding'>
 
 							<strong>Edit</strong>
 
@@ -252,7 +221,7 @@ if(!$_SESSION['admin']){
 
 				
 
-					<div class="well" style="padding:5px; margin-bottom:5px;">	 
+					<div class="well" style="padding:5px; box-shadow: 2px 2px 5px #000000; min-height:500px; margin-bottom:5px; min-height:467px;">	 
 
 						<div class="tab-content">
 
@@ -303,7 +272,7 @@ if(!$_SESSION['admin']){
 
 					
 
-					</div>
+					
 
 					<br>
 
@@ -316,6 +285,7 @@ if(!$_SESSION['admin']){
 						</button>
 						</form>
 						<div id='finalerror'></div>
+						</div>
 						";
 
 
@@ -400,7 +370,7 @@ if(!$_SESSION['admin']){
 
 		
 
-			<ul class="nav nav-tabs" id="myTab" >
+			<ul class="nav nav-tabs" id="myTab" style='border-bottom:0px !important;'>
 
 				<li style='width:25%; text-align:left;'>
 
@@ -465,7 +435,7 @@ if(!$_SESSION['admin']){
 
 		
 
-		<div class="well" style="padding:5px;">	 
+		<div class="well" style="padding:5px; box-shadow: 2px 2px 5px #000000; min-height:467px;">	 
 
 			<div class="tab-content">
 
