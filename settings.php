@@ -1,4 +1,4 @@
-<?php
+<?php  
 
 session_start();
 
@@ -152,7 +152,7 @@ $alerturl = $alerturl['value'];
 
    						<li>
 
-   							<a href='admin.php?a=logout'>Logout</a>
+   							<a href="admin.php?a=logout">Logout</a>
 
    						</li>
 
@@ -278,7 +278,7 @@ $alerturl = $alerturl['value'];
 
 					    <span class='col-md-12'>
 
-					    	Customize Text / Twitter Formattng
+					    	Customize SMS / Twitter Formattng
 
 			  			</span>
 
@@ -296,11 +296,51 @@ $alerturl = $alerturl['value'];
 
 					    <span class='col-md-8'>
 
-					    	Text / Twitter Char Limit
+					    	SMS / Twitter Char Limit
 
 			  			</span>
 
 			  			<span id='charlimitresult' class='col-md-4' style='text-align:right; font-size:.8em;'></span>
+
+					  </div>
+
+					</a>
+
+				</div>
+
+				<div class="panel panel-info btn-info">
+
+					<a href='#gateway' data-toggle='modal'>
+
+					  <div class="panel-body settingspanel row">
+
+					    <span class='col-md-8'>
+
+					    	Manage SMS Gateways
+
+			  			</span>
+
+			  			<span id='gatewayresult' class='col-md-4' style='text-align:right; font-size:.8em;'></span>
+
+					  </div>
+
+					</a>
+
+				</div>
+
+				<div class="panel panel-info btn-info">
+
+					<a href='#changeaddress' data-toggle='modal'>
+
+					  <div class="panel-body settingspanel row">
+
+					    <span class='col-md-8'>
+
+					    	Manage Reply / From Addresses
+
+			  			</span>
+
+			  			<span id='addressresult' class='col-md-4' style='text-align:right; font-size:.8em;'></span>
 
 					  </div>
 
@@ -551,7 +591,7 @@ $alerturl = $alerturl['value'];
 
 		      		<div class='col-md-12'>
 
-		      			<pre><? echo $alerturl ?></pre>
+		      			<pre><?php  echo $alerturl ?></pre>
 
 		      		</div>
 
@@ -817,7 +857,7 @@ $alerturl = $alerturl['value'];
 
 			        	<div class="btn-group pull-center" data-toggle="buttons">
 						  <label class="btn btn-success active">
-						    <input type="radio"  onChange="setType('Text'); getFormatOptions();"  value='Text'> Text
+						    <input type="radio"  onChange="setType('Text'); getFormatOptions();"  value='Text'> SMS
 						  </label>
 						  <label class="btn btn-success ">
 						    <input type="radio"  onChange="setType('Twitter'); getFormatOptions();" value='Twitter'> Twitter
@@ -989,7 +1029,7 @@ $alerturl = $alerturl['value'];
 
 		      <div class="modal-footer">
 
-		        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 
 		        <button type="button" class="btn btn-primary gonewmsg">Add Message</button>
 
@@ -1056,7 +1096,7 @@ $alerturl = $alerturl['value'];
 
 		      <div class="modal-footer">
 
-		        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 
 		        <button type="button" class="btn btn-primary gonewsub">Add Subscription</button>
 
@@ -1098,7 +1138,7 @@ $alerturl = $alerturl['value'];
 
 			  			<div class='col-md-4 col-md-offset-2 vmiddle'>
 
-			  				Text Character Limit: 
+			  				SMS Character Limit: 
 
 			  			</div>
 
@@ -1156,6 +1196,134 @@ $alerturl = $alerturl['value'];
 		</div><!-- /.modal -->
 
 
+		<div class="modal fade" id="changeaddress">
+
+		  <div class="modal-dialog">
+
+		    <div class="modal-content">
+
+		      <div class="modal-header">
+
+		        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+		        <h4 class="modal-title">Manage Reply / From Addresses</h4>
+
+		      </div>
+
+		      <div class="modal-body">
+
+		      	<p>
+
+		        	<form id='addressform' style='text-align:left;'>
+
+
+			  		<div class='row '>
+
+
+
+			  			<div class='col-md-4 col-md-offset-2 vmiddle' style='text-align:right;'>
+
+			  				*Reply To Address: 
+
+			  			</div>
+
+			  			<div class='col-md-6'>
+			  				
+	
+			  				<input type='email' required="required" name='replyto' id='replyto' class='form-control' style='width:250px' maxlength='50'>
+			  				
+			  				
+
+			  			</div>
+
+			  		</div>
+			  		<div class='row '>
+
+
+
+			  			<div class='col-md-4 col-md-offset-2 vmiddle' style='text-align:right;'>
+
+			  				From Address:
+
+			  			</div>
+
+			  			<div class='col-md-6'>
+
+			  				<input type='email' required="required" name='fromaddress' id='fromaddress' class='form-control' style='width:250px' maxlength='50'>
+
+			  			</div>
+
+			  		</div>
+
+
+			  		<div class='row'>
+
+			  			<div class='col-md-12 error' style='text-align:center; min-height:15px;' id='addresserror'></div>
+
+			  		</div>
+
+		        </p>
+
+		      </div>
+
+		      <div class="modal-footer">
+		      	<center><small>*Not Implemented, see sendmail.php line 186</small><br>
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+
+		        <button type="button" class="btn btn-primary gochangeaddress">Save Changes</button>
+
+		        </form>
+
+		      </div>
+
+
+		    </div><!-- /.modal-content -->
+
+		  </div><!-- /.modal-dialog -->
+
+		</div><!-- /.modal -->
+
+
+
+		<div class="modal fade" id="gateway">
+
+		  <div class="modal-dialog">
+
+		    <div class="modal-content">
+
+		      <div class="modal-header">
+
+		        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+		        <h4 class="modal-title">Manage Gateways</h4>
+
+		      </div>
+
+		      <div style='margin-top:1px; margin-bottom:1px;'>
+
+		      	<p id='gatewaybody'>
+
+
+		        </p>
+
+		        <div id='gatewayerror'></div>
+
+		        <form id='gatewaypageid'><input type='hidden' id='gatewaypage' name='page' value='1'></form>
+
+		      </div>
+
+		      <div class="modal-footer">
+
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+		      </div>
+
+		    </div><!-- /.modal-content -->
+
+		  </div><!-- /.modal-dialog -->
+
+		</div><!-- /.modal -->
+
 
 
 
@@ -1189,8 +1357,18 @@ $alerturl = $alerturl['value'];
 			$('#subscribers').on('show.bs.modal', function () {
 
 
-
+				clearData();
 				getPageData();
+
+
+
+			})
+
+			$('#gateway').on('show.bs.modal', function () {
+
+
+				clearData();
+				getGatewayData();
 
 
 
@@ -1222,6 +1400,12 @@ $alerturl = $alerturl['value'];
 
 			});
 
+			$('#changeaddress').on('show.bs.modal', function () {
+
+				getAddress();
+
+			});
+
 
 			$('#msgformat').on('hide.bs.modal', function () {
 
@@ -1235,6 +1419,7 @@ $alerturl = $alerturl['value'];
 				$("#msgbody").html("");
 				$("#subsbody").html("");
 				$("#msgpreview").html("");
+				$("#gatewaybody").html("");
 			}
 
 			function getCharLimit(){
@@ -1242,6 +1427,14 @@ $alerturl = $alerturl['value'];
 				var posting = $.post("ajax/getcharlimit.php", {getcharlimit: true});
 				posting.done(function(data){
 					$("#charlimiterror").html(data);
+				});
+			}
+
+			function getAddress(){
+
+				var posting = $.post("ajax/getaddress.php", {getaddress: true});
+				posting.done(function(data){
+					$("#addresserror").html(data);
 				});
 			}
 
@@ -1316,6 +1509,37 @@ $alerturl = $alerturl['value'];
 				});
 
 			}
+
+			function getGatewayData(){
+
+				var posting = $.ajax({
+
+					type: "POST",
+
+					url: "ajax/getgateway.php", 
+
+					data: $("#gatewaypage").serialize(),
+
+				});
+
+				posting.done(function(data){
+
+					clearData();
+
+					$("#gatewaybody").html(data);
+
+				});
+
+				var pgbtn = $(".pgbtn").hammer({
+
+					hold_timeout: 0.000001
+
+				});
+
+			}
+
+
+
 
 			function setType(type){
 
@@ -1587,6 +1811,20 @@ $alerturl = $alerturl['value'];
 
 			    });
 
+			}); 
+
+			$( ".gochangeaddress" ).click(function( event ) {
+
+
+			 	var $form = $( "#addressform" );
+
+			 	var posting = $.post( "ajax/getaddress.php", $form.serialize() );
+
+			 	posting.done(function( data ) {
+			 			$("#addresserror").html(data);
+			 			
+			    });
+
 			});
 
 			$( ".gonewsub" ).click(function( event ) {
@@ -1598,7 +1836,6 @@ $alerturl = $alerturl['value'];
 
 			 	posting.done(function( data ) {
 
-			 			
 			 			
 			 			$("#newsuberror").html(data);
 
@@ -1650,7 +1887,7 @@ $alerturl = $alerturl['value'];
 
 
 
-<?
+<?php 
 
 }
 

@@ -1,4 +1,4 @@
-<?php
+<?php  
 
 
 
@@ -364,7 +364,7 @@ $content .=  "
 		<font style='font-size:10pt'>To modify or unsubscribe from IgLou Alert System, 
 		<!--SURL--> 
 
-		<a href='http://lgrimsley.com/alert/index.php'>click here</a>
+		<a href='http://hey.iglou.com'>click here</a>
 
 		<!--EURL-->
 

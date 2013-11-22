@@ -1,4 +1,4 @@
-<?php
+<?php  
 
 
 
@@ -29,6 +29,8 @@ if(isset($_SESSION['alert']['method'][0])){
     if(!in_array("Text",$_SESSION['alert']['method'][0])) $textstyle = array("btn-default", "");
 }
 
+$lastalert = getLastAlert();
+
 
 $html = "
 
@@ -44,7 +46,7 @@ $html = "
 
                     $html .="
 
-                        <div id='".$status."subject' style='display:none; width:100%; padding:0px; margin:0px'>
+                        <div id='".$status."subject'  style='display:none; width:100%; padding:0px; margin:0px'>
 
                             
                             <input type='text' class='input-search form-control pull-left' value='".$subject."'  style='width:88%; ' name='custom".$status."select' placeholder='Alert Subject'>
@@ -97,18 +99,21 @@ $html = "
 
 
 
-$html .="
+$html .="       <div class='row'>
 
                         <textarea name='msg' class='textarea form-control' rows='6'  id='".$status."text' >".$thistext."</textarea>
 
-                    
+                </div>
 
                     <div style='min-width:280px; max-width:600px; width:100%;'>";                        
 
                         $html .= showSubscription("admin","",$status);
 
 
-$html .="           </div>
+$html .="           </div>";
+
+$html .= $lastalert;
+$html .="
 
                     <div style='width:100%; height:20%; '>
                         <div class='vmiddle' style='width:48%; height:20%;text-align:center;'>

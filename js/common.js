@@ -31,13 +31,13 @@ $(document).ready(function(){
 			
 
 		
-
+  
 			var clear = $("#clear").hammer({
 
 				hold_timeout: 0.000001
 
 			});
-
+ 
 			
 
 			
@@ -45,10 +45,10 @@ $(document).ready(function(){
 			clear.on("hold, click, tap", function(ev){
 
 				$("#val").attr("value","");
-				$("#calc").attr("value","");
+				$("#calc").html("");
 
 			});
-
+ 
 			var notyou = $("#notyou").hammer({
 
 				hold_timeout: 0.000001
@@ -154,7 +154,7 @@ $(document).ready(function(){
 
 				}else{
 
-					document.getElementById('uptext').innerText = id;
+					$("#uptext").val(id);
 
 				}	
 
@@ -172,7 +172,7 @@ $(document).ready(function(){
 
 				}else{
 
-					document.getElementById('downtext').innerText = id;
+					$("#downtext").val(id);
 
 				}
 

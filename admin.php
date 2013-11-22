@@ -1,4 +1,4 @@
-<?php
+<?php  
 
 session_start();
 include("template/adminheader.php");
@@ -20,7 +20,7 @@ dbconnect();
 
 
 
-<?
+<?php 
 
 $action = $_GET['a']; 
 
@@ -32,7 +32,7 @@ if($action == "logout"){
 
 	session_unset();	 
 
-	session_unregister($SESSION['admin']);
+	unset($SESSION['admin']);
 
 }
 
@@ -80,7 +80,7 @@ if(!$_SESSION['admin']){
 		  </div><!-- /.modal-dialog -->
 		</div><!-- /.modal -->
 
-<?
+<?php 
 
 
 
@@ -158,23 +158,23 @@ if(!$_SESSION['admin']){
 
 				<div class='row' style='max-width:500px;  padding:0px; margin:0px;'>
 					<ul class="nav nav-tabs" id="preTab" style="margin:0px; border-bottom:0px !important;">
-				<?php
+				<?php  
 					foreach($_SESSION['alert']['method'][0] as $method){
 				?>
 
 				
 						<li style='width:20%'>
 
-							<a href="#<?echo $method ?>" class='tabpadding'>
+							<a href="#<?php echo $method ?>" class='tabpadding'>
 
-							<strong><? echo $method ?></strong>
+							<strong><?php  echo $method ?></strong>
 
 							</a>
 
 						</li>
 
 
-					<?php
+					<?php  
 
 						}
 
@@ -209,7 +209,7 @@ if(!$_SESSION['admin']){
    						</li>
    						<li class='divider'></li>
    						<li>
-   							<a href='admin.php?a=logout'>Logout</a>
+   							<a href="admin.php?a=logout">Logout</a>
    						</li>
    					</ul>
 
@@ -225,42 +225,42 @@ if(!$_SESSION['admin']){
 
 						<div class="tab-content">
 
-						<?php
+						<?php  
 							foreach($_SESSION['alert']['method'][0] as $method){
 								if($method == "Email"){
 
 							?>
 
-						  <div class="tab-pane active" id="<?echo $method?>">
+						  <div class="tab-pane active" id="<?php echo $method?>">
 
 							<iframe seamless='seamless' style='max-width:510px; width:100%; height:400px;' src='alertcontents.html'></iframe>
 
 						  </div>
 
-						  	<?php
+						  	<?php  
 
 								}elseif($method == "Twitter"){
 
 							?>
 
-						  <div class="tab-pane " id="<?echo $method?>">
+						  <div class="tab-pane " id="<?php echo $method?>">
 
-							<pre style='text-align:left; width:300px; background-color:white;'><? echo $tweet ?></font></pre>
+							<pre style='text-align:left; width:300px; background-color:white;'><?php  echo $tweet ?></font></pre>
 
 
 						  </div>
 
-						<?
+						<?php 
 							}else{
 						?>
 
-								<div class="tab-pane " id="<?echo $method?>">
+								<div class="tab-pane " id="<?php echo $method?>">
 
-							<pre style='text-align:left; width:300px; background-color:white;'><? echo $txtmsg ?></pre>
+							<pre style='text-align:left; width:300px; background-color:white;'><?php  echo $txtmsg ?></pre>
 
 
 						  </div>
-						 <?
+						 <?php 
 
 						}
 					}
@@ -276,7 +276,7 @@ if(!$_SESSION['admin']){
 
 					<br>
 
-						<? echo "
+						<?php  echo "
 						<form id='finalform'>
 						<button type='submit' class='btn btn-primary btn-lg sendmail' href='admin.php?a=sendmail'>
 
@@ -354,7 +354,7 @@ if(!$_SESSION['admin']){
 			  </script>
 
 
-		<?
+		<?php 
 
 		}else{
 
@@ -374,7 +374,7 @@ if(!$_SESSION['admin']){
 
 				<li style='width:25%; text-align:left;'>
 
-					<a href="#down"  class='<? if($_SESSION['alert']['status'] == "down" || !isset($_SESSION['alert']['status'])) echo "active"; ?> tabpadding'>
+					<a href="#down"  class='<?php  if($_SESSION['alert']['status'] == "down" || !isset($_SESSION['alert']['status'])) echo "active"; ?> tabpadding'>
 
 					<strong>Down</strong>
 
@@ -384,7 +384,7 @@ if(!$_SESSION['admin']){
 
 				<li style='width:25%;'>
 
-					<a href="#up"  class='<? if($_SESSION['alert']['status'] == "up") echo "active"; ?> tabpadding'>
+					<a href="#up"  class='<?php  if($_SESSION['alert']['status'] == "up") echo "active"; ?> tabpadding'>
 
 					<strong>Up</strong>
 
@@ -394,7 +394,7 @@ if(!$_SESSION['admin']){
 
 				<li style='width:30%;'>
 
-					<a href="#info"  class='<? if($_SESSION['alert']['status'] == "info") echo "active"; ?> tabpadding'>
+					<a href="#info"  class='<?php  if($_SESSION['alert']['status'] == "info") echo "active"; ?> tabpadding'>
 
 					<strong>Announce</strong>
 
@@ -422,7 +422,7 @@ if(!$_SESSION['admin']){
    						</li>
    						<li class='divider'></li>
    						<li>
-   							<a href='admin.php?a=logout'>Logout</a>
+   							<a href="admin.php?a=logout">Logout</a>
    						</li>
    					</ul>
 
@@ -441,18 +441,18 @@ if(!$_SESSION['admin']){
 
 			  <div class="tab-pane" id="down">
 
-				<? echo getAdminUI('down'); ?>
+				<?php  echo getAdminUI('down'); ?>
 
 			  </div>
 			  <div class="tab-pane active" id="up">
 
-				<? echo getAdminUI('up'); ?> 
+				<?php  echo getAdminUI('up'); ?> 
 
 			  </div>
 
 			  <div class="tab-pane" id="info">
 
-				<? echo getAdminUI('info'); ?> 
+				<?php  echo getAdminUI('info'); ?> 
 
 			  </div>
 
@@ -513,7 +513,7 @@ if(!$_SESSION['admin']){
 
     </script>
 
-		<?
+		<?php 
 
 	 
 

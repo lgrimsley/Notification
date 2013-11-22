@@ -1,4 +1,4 @@
-<?php
+<?php  
 
 session_start();
 
@@ -6,12 +6,26 @@ session_start();
 
 if($_SESSION['admin'] == true && isset($_SESSION['alert'])){
 
-
-
 include("../functions.php");
 
 dbconnect();
 
+
+//Get reply to and from addresses from database 
+
+$fquery = mysql_query("SELECT `value` FROM `settings` WHERE `type`='from' AND `current`='yes'");
+if(mysql_num_rows($fquery)){
+	$from = mysql_result($fquery, 0);
+}else{
+	$from = "alert@iglou.com";
+}
+
+$rquery = mysql_query("SELECT `value` FROM `settings` WHERE `type`='replyto' AND `current`='yes'");
+if(mysql_num_rows($rquery)){
+	$replyto = mysql_result($rquery, 0);
+}else{
+	$replyto = "alert@iglou.com";
+}
 
 
 		
@@ -52,21 +66,6 @@ $twfcount = 0;//Count of tweets failed
 
 $failed = array(); //store users that failed in this array for trimming later on.
 
-
-
-// Always set content-type when sending HTML email
-
-
-
-
-
-
-
-// More headers
-
-
-
-$headers .= 'From: <alert@iglou.com>' . "\r\n";
 
 
 
@@ -183,8 +182,10 @@ foreach($_SESSION['users'] as $user){
 
 
 		$headers .= "Content-type:text/html;charset=iso-8859-1" . "\r\n";
-
-
+		$headers .= "From: <".$from.">" . "\r\n"; 
+	//	$headers .= "Reply-To: <".$replyto . ">\r\n";
+	//11-22-13: Reply to functionality not working in mobile GMAIL client for some reason. Works elsewhere. 
+	//Dean asked me to disable this due to no time remaining. 
 
 		$message = file_get_contents('../alertcontents.html');
 
@@ -232,12 +233,12 @@ foreach($_SESSION['users'] as $user){
 
 
 
-	$message = preg_replace('#(<!--SURL-->)(.*)(<!--EURL-->)#si', "<a href='http://lgrimsley.com/alert/index.php?a=unsubscribe&Email=".$user['email']."'>Click Here</a>", $message);
+	$message = preg_replace('#(<!--SURL-->)(.*)(<!--EURL-->)#si', "<a href='http://hey.iglou.com?a=services&l_t=Email&Email=".$user['email']."'>Click Here</a>", $message);
 
 	$message = preg_replace('#('.$start.')(.*)('.$end.')#si', $content, $message);
 
 
-	if(mail($user['email'],$_SESSION['alert']['subject'],$message, $headers, '-falert@iglou.com')){
+	if(mail($user['email'],$_SESSION['alert']['subject'],$message, $headers)){
 
 							
 
@@ -294,8 +295,7 @@ foreach($_SESSION['users'] as $user){
 
 
 
-
-		if(mail($user['email'],"",$message, $headers, '-falert@iglou.com')){
+		if(mail($user['email'],"",$message, $headers, "-f".$from)){
 
 
 
@@ -369,7 +369,7 @@ foreach($_SESSION['users'] as $user){
 
             <td>Total</td>
 
-            <td><a class='btn btn-sl btn-info' style='width:100px' href='http://lgrimsley.com/alert/a/?i=" . $_SESSION['alert']['id'] ."'>View Alert</a></td>
+            <td><a class='btn btn-sl btn-info' style='width:100px' href='http://hey.iglou.com/a/?i=" . $_SESSION['alert']['id'] ."'>View Alert</a></td>
 
           </tr>	
 
@@ -381,7 +381,7 @@ foreach($_SESSION['users'] as $user){
 
             <td>Email</td>
 
-            <td><a class='btn btn-sl btn-info' style='width:100px' href='http://lgrimsley.com/alert/a/?i=" . $_SESSION['alert']['id'] ."'>View Email</a></td>
+            <td><a class='btn btn-sl btn-info' style='width:100px' href='http://hey.iglou.com/a/?i=" . $_SESSION['alert']['id'] ."'>View Email</a></td>
 
           </tr>
 
@@ -393,7 +393,7 @@ foreach($_SESSION['users'] as $user){
 
             <td>Text</td>
 
-            <td><a class='btn btn-sl btn-info' style='width:100px' href='http://lgrimsley.com/alert/a/?t=txt&i=" . $_SESSION['alert']['id'] ."'>View Text</a></td>
+            <td><a class='btn btn-sl btn-info' style='width:100px' href='http://hey.iglou.com/a/?t=txt&i=" . $_SESSION['alert']['id'] ."'>View Text</a></td>
 
           </tr>
 

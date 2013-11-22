@@ -1,4 +1,4 @@
-<?php
+<?php  
 
 
 
@@ -76,17 +76,75 @@ $domain_array[$i])) {
 
 }
 
+function prependHTTP( $m )
+ {
+   $mStr = $m[1].$m[2].$m[3];
 
+   // if its an email address
+   if( preg_match('#([a-z0-9&\-_.]+?)@([\w\-]+\.([\w\-\.]+\.)*[\w]+)#', $mStr))
+   {
+        return "<a href=\"mailto:".$m[2].$m[3]."\" target=\"_blank\">".$m[1].$m[2].$m[3]."</a>"; 
+   }
+   else
+   {
+    $http = (!preg_match("#(https://)#", $mStr)) ? 'http://' : 'https://';
+    return "<a href=\"".$http.$m[3]."\" target=\"_blank\">View Alert</a>"; 
+    }   
+ }
+
+function getLastAlert(){
+
+	$query = mysql_query("SELECT * FROM `alerts` WHERE `date` >= DATE_SUB(NOW(), INTERVAL 2 DAY) ORDER BY `id` DESC LIMIT 1");
+	if(mysql_num_rows($query)){
+		$lastalert = mysql_fetch_array($query);
+	}else{
+		return "none";
+	}
+	
+	$then = strtotime($lastalert['date']);
+	$now = time();
+	$difference = $now - $then;
+	$minutes = $difference / 60;  //Get total minutes
+	$hours = floor($minutes / 60);   //Get total hours
+	$minutes = ceil($minutes % 60); //Get remaining minutes after taking hours
+	$seconds = ceil($difference % 60); // Get remaining seconds after taking hours
+
+	$query = mysql_query("SELECT `value` FROM `settings` WHERE `type`='alerturl' AND `current`='yes'");
+	if(mysql_num_rows($query)){
+		$alerturl = mysql_result($query,0);
+	}else $alerturl = "INVALID_LINKBACK";
+	$alerturl = str_replace("[alert id]", $lastalert['id'], $alerturl); 
+	//$reg_exUrl = "/(http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/";
+	$reg_exUrl = '#(?i)(http|https)?(://)?(([-\w^@]+\.)+(net|org|edu|gov|me|com+)(?:/[^,.\s]*|))#';
+	preg_match($reg_exUrl, $alerturl, $url);
+
+      // make the urls hyper links
+      // $url =  preg_replace($reg_exUrl, "<a href='{$url[0]}'>{$url[0]}</a> ", $alerturl);
+
+	$url = prependHTTP($url);
+	$time = "";
+	if($hours) $time .= "$hours hours, ";
+	if($minutes) $time .= "$minutes minutes, ";
+	$time .= "$seconds seconds ";
+	$html = "
+	<div class='row'>
+		An alert was posted $time ago: $url
+	</div>
+	";
+
+	return $html;
+
+}
 
 function dbconnect(){
 
 	$hostname=  "localhost";
 
-	$dbname = "grimsley_development";  
+	$dbname = "notify";  
 
-	$dbuser = "grimsley_logan";
+	$dbuser = "notify";
 
-	$dbpw = "bigbang1";
+	$dbpw = "loganisthebestever";
 
 	mysql_connect($hostname, $dbuser, $dbpw) or DIE(mysql_error());
 

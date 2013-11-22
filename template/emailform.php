@@ -70,7 +70,7 @@
 
 
 
-					<?php	dbconnect();	
+					<?php  	dbconnect();	
 
 					$query = mysql_query("SELECT * FROM `providers`") or die(mysql_error());	
 

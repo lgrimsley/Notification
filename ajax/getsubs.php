@@ -1,4 +1,4 @@
-<?php
+<?php  
 
 session_start();
 
@@ -251,7 +251,7 @@ if(isset($_SESSION['admin'])){
 		</td>
 	</tr>
 
-	<?php
+	<?php  
 
 		$count = ($limit * ($page-1))+1;
 
@@ -263,21 +263,21 @@ if(isset($_SESSION['admin'])){
 
 	<tr> 
 		<td>
-			<form id='m<? echo $row['id'] ?>'>
+			<form id='m<?php  echo $row['id'] ?>'>
 				<table width='100%'>
 					<tr>
 						<td style='width:75%'>
-							<input type='text' style='display:none;' name='service' value='<? echo $row['name'] ?>' class='form-control form<? echo $row['id'] ?>' width='100%'>
-							<pre style='margin:0px;' class='display<? echo $row['id'] ?>'><? echo $row['name'] ?></pre>
+							<input type='text' style='display:none;' name='service' value='<?php  echo $row['name'] ?>' class='form-control form<?php  echo $row['id'] ?>' width='100%'>
+							<pre style='margin:0px;' class='display<?php  echo $row['id'] ?>'><?php  echo $row['name'] ?></pre>
 						</td>
 
 						<td style='width:20%'>
-							<button type='button' class='btn btn-sm btn-success submitedit form<? echo $row['id'] ?>' name='<? echo $row['id'] ?>' style='display:none;'><i class='glyphicon glyphicon-floppy-disk'></i></button>
-							<button type='button' class='btn btn-sm btn-success edit display<? echo $row['id'] ?>' name='<? echo $row['id'] ?>'><i class='glyphicon glyphicon-pencil'></i></button>
-							<button type='button' class='btn btn-sm btn-info canceledit form<? echo $row['id'] ?>' name='<? echo $row['id'] ?>' style='display:none;'><i class='glyphicon glyphicon-floppy-remove'></i></button>
-							<button type='button' class='btn btn-sm btn-danger delete display<? echo $row['id'] ?>' name='<? echo $row['id'] ?>'><i class='glyphicon glyphicon-remove'></i></button>
-							<button type='button' class='btn btn-sm btn-danger delconfirm' id='delconfirm<? echo $row['id'] ?>' name='<? echo $row['id'] ?>' style='display:none;'><i class='glyphicon glyphicon-trash'></i></button>
-							<input type='hidden' name='id' value='<? echo $row['id'] ?>'>
+							<button type='button' class='btn btn-sm btn-success submitedit form<?php  echo $row['id'] ?>' name='<?php  echo $row['id'] ?>' style='display:none;'><i class='glyphicon glyphicon-floppy-disk'></i></button>
+							<button type='button' class='btn btn-sm btn-success edit display<?php  echo $row['id'] ?>' name='<?php  echo $row['id'] ?>'><i class='glyphicon glyphicon-pencil'></i></button>
+							<button type='button' class='btn btn-sm btn-info canceledit form<?php  echo $row['id'] ?>' name='<?php  echo $row['id'] ?>' style='display:none;'><i class='glyphicon glyphicon-floppy-remove'></i></button>
+							<button type='button' class='btn btn-sm btn-danger delete display<?php  echo $row['id'] ?>' name='<?php  echo $row['id'] ?>'><i class='glyphicon glyphicon-remove'></i></button>
+							<button type='button' class='btn btn-sm btn-danger delconfirm' id='delconfirm<?php  echo $row['id'] ?>' name='<?php  echo $row['id'] ?>' style='display:none;'><i class='glyphicon glyphicon-trash'></i></button>
+							<input type='hidden' name='id' value='<?php  echo $row['id'] ?>'>
 							
 						</td>
 					</tr>
@@ -286,7 +286,7 @@ if(isset($_SESSION['admin'])){
 		</td>
 	</tr>
 
-	<?php
+	<?php  
 
 	$count++;
 
@@ -298,7 +298,7 @@ if(isset($_SESSION['admin'])){
 
 
 <center>
-<?=$pagination?>
+<?php echo $pagination ?>
 </center>
 
 
@@ -423,7 +423,7 @@ if(isset($_SESSION['admin'])){
 
 
 </script>
-<?
+<?php 
 }
 ?>
 	

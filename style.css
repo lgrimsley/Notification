@@ -198,11 +198,10 @@ width:100%;
 
 .textarea{
 
-
-
-width:98%;
-
-height:120px;
+max-width:475px;
+max-height:155px;
+min-width:475px;
+min-height:155px;
 
 font-size:1.2em;
 

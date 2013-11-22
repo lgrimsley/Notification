@@ -1,4 +1,4 @@
-<?php 
+<?php  
 
 include("template/header.php");
 
@@ -68,7 +68,7 @@ if($action != ""){
 
 
 
-<?
+<?php 
 
 
 

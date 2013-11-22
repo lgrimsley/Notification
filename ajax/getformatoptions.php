@@ -1,4 +1,4 @@
-<?php
+<?php  
 
 session_start();
 
@@ -36,36 +36,36 @@ if(isset($_SESSION['admin'])){
 <center>
 	<form id="changeformat">
 		<div class="btn-group pull-center" data-toggle="buttons"  >
-		  <label class="btn btn-info <?echo $titlestatus ?>" id='title' style='width:150px'>
-		    <input type="checkbox"  class=' changeformat ' id='changetitle' <? if($titlestatus == "active") echo "checked='checked'"; ?> name='format[]' value='title'>
+		  <label class="btn btn-info <?php echo $titlestatus ?>" id='title' style='width:150px'>
+		    <input type="checkbox"  class=' changeformat ' id='changetitle' <?php  if($titlestatus == "active") echo "checked='checked'"; ?> name='format[]' value='title'>
 		     Custom Header
 		  </label>
-		  <label class="btn btn-info <?echo $subjectstatus ?>" id='subject' style='width:150px'>
-		    <input type="checkbox" class=' changeformat' <? if($subjectstatus == "active") echo "checked='checked'"; ?> name='format[]' value='subject'>
+		  <label class="btn btn-info <?php echo $subjectstatus ?>" id='subject' style='width:150px'>
+		    <input type="checkbox" class=' changeformat' <?php  if($subjectstatus == "active") echo "checked='checked'"; ?> name='format[]' value='subject'>
 		     Subject
 		  </label>
-		  <label class="btn btn-info <?echo $messagestatus ?>" id='message'  style='width:150px'>
-		    <input type="checkbox" class='changeformat' <? if($messagestatus == "active") echo "checked='checked'"; ?> name='format[]' value='message'>
+		  <label class="btn btn-info <?php echo $messagestatus ?>" id='message'  style='width:150px'>
+		    <input type="checkbox" class='changeformat' <?php  if($messagestatus == "active") echo "checked='checked'"; ?> name='format[]' value='message'>
 		     Message
 		  </label>
 		</div>
 		<div class="btn-group pull-center" data-toggle="buttons">
-		  <label class="btn btn-info <?echo $footerstatus ?>" id='footer'  style='width:150px'>
-		    <input type="checkbox"  class='changeformat ' id='changefooter' <? if($footerstatus == "active") echo "checked='checked'"; ?> name='format[]' value='footer'>
+		  <label class="btn btn-info <?php echo $footerstatus ?>" id='footer'  style='width:150px'>
+		    <input type="checkbox"  class='changeformat ' id='changefooter' <?php  if($footerstatus == "active") echo "checked='checked'"; ?> name='format[]' value='footer'>
 		     Custom Footer
 		  </label>	
-		  <label class="btn btn-info <?echo $servicesstatus ?>" id='services'  style='width:150px'>
-		    <input type="checkbox" class=' changeformat' <? if($servicesstatus == "active") echo "checked='checked'"; ?> name='format[]' value='services'>
+		  <label class="btn btn-info <?php echo $servicesstatus ?>" id='services'  style='width:150px'>
+		    <input type="checkbox" class=' changeformat' <?php  if($servicesstatus == "active") echo "checked='checked'"; ?> name='format[]' value='services'>
 		     Services
 		  </label>
-		  <label class="btn btn-info <?echo $linkbackstatus ?>" id='linkback'  style='width:150px'>
-		    <input type="checkbox" class=' changeformat' <? if($linkbackstatus == "active") echo "checked='checked'"; ?> name='format[]' value='linkback'>
+		  <label class="btn btn-info <?php echo $linkbackstatus ?>" id='linkback'  style='width:150px'>
+		    <input type="checkbox" class=' changeformat' <?php  if($linkbackstatus == "active") echo "checked='checked'"; ?> name='format[]' value='linkback'>
 		     Link-Back
 		  </label>
 		</div>
 
-		<input type='hidden' name='status' value='<?echo $status?>'>
-		<input type='hidden' name='type' value='<?echo $type?>'>
+		<input type='hidden' name='status' value='<?php echo $status?>'>
+		<input type='hidden' name='type' value='<?php echo $type?>'>
 	</form>
 </center>
 
@@ -140,19 +140,11 @@ if(isset($_SESSION['admin'])){
 				}
 			}
 
-			function getCustom(){
-				var $form = $("#formattype");
-
-				var posting = $.post("ajax/getcustom.php", $form.serialize());
-				posting.done(function(data){
-					$("#formaterror").html(data);
-
-				});
-			}
+			
 
 		</script>
 
-	<?
+	<?php 
 }else{
 	echo "Your session has expired. You must login again to access this page <a href='admin.php'>(Click Here)</a>";
 }
